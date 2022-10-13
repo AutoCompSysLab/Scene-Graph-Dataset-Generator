@@ -1,0 +1,114 @@
+digraph {
+	objects_1 [label=floor_1 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_1clean [label=clean fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_1 -> objects_1clean
+	objects_1flat [label=flat fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_1 -> objects_1flat
+	objects_1inside [label=inside fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_1 -> objects_1inside
+	objects_1lower [label=lower fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_1 -> objects_1lower
+	objects_1horizontal [label=horizontal fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_1 -> objects_1horizontal
+	objects_1beige [label=beige fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_1 -> objects_1beige
+	objects_450 [label="soap dish_450" fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_3 [label=door_3 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_3white [label=white fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_3 -> objects_3white
+	objects_3flat [label=flat fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_3 -> objects_3flat
+	objects_3closed [label=closed fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_3 -> objects_3closed
+	objects_4 [label="trash can_4" fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_5 [label="trash can_5" fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_6 [label=fridge_6 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_7 [label=object_7 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_7tangible [label=tangible fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_7 -> objects_7tangible
+	objects_9 [label=stove_9 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_11 [label="kitchen cabinet_11" fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_11low [label=low fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_11 -> objects_11low
+	objects_12 [label="oven glove_12" fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_2 [label=wall_2 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_2architectural [label=architectural fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_2 -> objects_2architectural
+	objects_15 [label=wall_15 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_15architectural [label=architectural fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_15 -> objects_15architectural
+	objects_16 [label=ceiling_16 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_16overhead [label=overhead fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_16 -> objects_16overhead
+	objects_16upper [label=upper fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_16 -> objects_16upper
+	objects_17 [label=heater_17 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_17metal [label=metal fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_17 -> objects_17metal
+	objects_17rectangular [label=rectangular fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_17 -> objects_17rectangular
+	objects_17white [label=white fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_17 -> objects_17white
+	objects_17tall [label=tall fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_17 -> objects_17tall
+	objects_17narrow [label=narrow fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_17 -> objects_17narrow
+	objects_18 [label=pipe_18 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_18tubular [label=tubular fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_18 -> objects_18tubular
+	objects_19 [label=hood_19 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_20 [label=kettle_20 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_21 [label=toaster_21 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_23 [label=radiator_23 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_24 [label=curtain_24 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_26 [label=wall_26 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_26architectural [label=architectural fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_26 -> objects_26architectural
+	objects_220 [label=sponge_220 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_220porous [label=porous fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_220 -> objects_220porous
+	objects_31 [label=chair_31 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_31wooden [label=wooden fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_31 -> objects_31wooden
+	objects_31white [label=white fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_31 -> objects_31white
+	objects_32 [label=chair_32 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_33 [label=chair_33 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_34 [label=chair_34 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_35 [label="dining table_35" fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_36 [label="table lamp_36" fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_37 [label=box_37 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_37rectangular [label=rectangular fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_37 -> objects_37rectangular
+	objects_37tall [label=tall fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_37 -> objects_37tall
+	objects_38 [label="table lamp_38" fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_39 [label=rack_39 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_40 [label=shoe_40 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_28 [label="kitchen cabinet_28" fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_28narrow [label=narrow fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_28 -> objects_28narrow
+	objects_42 [label=box_42 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_42rectangular [label=rectangular fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_42 -> objects_42rectangular
+	objects_42tall [label=tall fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_42 -> objects_42tall
+	objects_43 [label=object_43 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_43tangible [label=tangible fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_43 -> objects_43tangible
+	objects_44 [label=object_44 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_44tangible [label=tangible fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_44 -> objects_44tangible
+	objects_46 [label=object_46 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_46tangible [label=tangible fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_46 -> objects_46tangible
+	objects_47 [label=wall_47 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_47architectural [label=architectural fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_47 -> objects_47architectural
+	objects_48 [label=object_48 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_48tangible [label=tangible fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_48 -> objects_48tangible
+	objects_13 [label=sink_13 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_13wide [label=wide fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_13 -> objects_13wide
+}
