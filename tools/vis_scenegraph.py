@@ -36,16 +36,24 @@ with open(args.rel_path) as f:
     relationships = json.load(f)
 print("Finish!")
 
-print(json.dumps(relationships["scans"][scene_num], indent="\t"))
 
+scan_id = objects["scans"][scene_num]["scan"]
+for relationship_num in range(len(relationships["scans"])):
+    if relationships["scans"][relationship_num]["scan"] == scan_id:
+        scan_rel_num = relationship_num
+        break
+
+print(scan_id)
+print(json.dumps(objects["scans"][scene_num]["objects"], indent="\t") )
 #networkx setup
 G = nx.Graph()
 dg = graphviz.Digraph()
 tomato_rgb = [236,93,87]
 blue_rgb = [81,167,250]
+pale_rgb = [112,191,64]
+pale_hex = webcolors.rgb_to_hex(pale_rgb)
 tomato_hex = webcolors.rgb_to_hex(tomato_rgb)
 blue_hex = webcolors.rgb_to_hex(blue_rgb)
-
 #import object node
 for object_num in range(len(objects["scans"][scene_num]["objects"])):
     object = objects["scans"][scene_num]["objects"][object_num]
@@ -68,6 +76,17 @@ for object_num in range(len(objects["scans"][scene_num]["objects"])):
             dg.edge(("objects_" + str(object["id"])), ("objects_" + str(object["id"]) + attribute))
 
 #import relation node
+for relationship_num in range(len(relationships["scans"][scan_rel_num]["relationships"])):
+    relationship = relationships["scans"][scan_rel_num]["relationships"][relationship_num]
+
+    #relation class
+    dg.node(("relationship_" + str(relationship_num)), shape='box', style='filled,rounded',
+            label= (relationship[3]),
+            margin= '0.11, 0.0001', width='0.11', height='0',
+            fillcolor= pale_hex, fontcolor = 'black')
+    dg.edge(("objects_" + str(relationship[0])), ("relationship_" + str(relationship_num)))
+    dg.edge(("relationship_" + str(relationship_num)), ("objects_" + str(relationship[1])))
+
 
 dg.render("/home/dongmin/Scene-Graph-Dataset-Generator/results/test", view=True)
 
