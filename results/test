@@ -1,7 +1,9 @@
 digraph {
 	objects_1 [label=floor_1 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_1wooden [label=wooden fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_1 -> objects_1wooden
+	objects_1clean [label=clean fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_1 -> objects_1clean
+	objects_1messy [label=messy fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_1 -> objects_1messy
 	objects_1flat [label=flat fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
 	objects_1 -> objects_1flat
 	objects_1inside [label=inside fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
@@ -10,1266 +12,1254 @@ digraph {
 	objects_1 -> objects_1lower
 	objects_1horizontal [label=horizontal fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
 	objects_1 -> objects_1horizontal
-	objects_1clean [label=clean fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_1 -> objects_1clean
-	objects_1tidy [label=tidy fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_1 -> objects_1tidy
-	objects_2 [label=sofa_2 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_2gray [label=gray fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_2 -> objects_2gray
-	objects_2upholstered [label=upholstered fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_2 -> objects_2upholstered
-	objects_2tall [label=tall fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_2 -> objects_2tall
-	objects_2wide [label=wide fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_2 -> objects_2wide
-	objects_3 [label="coffee table_3" fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_3low [label=low fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_3 -> objects_3low
-	objects_3tall [label=tall fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_3 -> objects_3tall
-	objects_4 [label=wall_4 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_4architectural [label=architectural fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_4 -> objects_4architectural
-	objects_5 [label=shelf_5 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_5wide [label=wide fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_5 -> objects_5wide
-	objects_6 [label=cabinet_6 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_6tall [label=tall fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_6 -> objects_6tall
+	objects_1blue [label=blue fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_1 -> objects_1blue
+	objects_2 [label=wall_2 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_2flat [label=flat fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_2 -> objects_2flat
+	objects_2architectural [label=architectural fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_2 -> objects_2architectural
+	objects_2white [label=white fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_2 -> objects_2white
+	objects_3 [label=wall_3 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_3flat [label=flat fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_3 -> objects_3flat
+	objects_3architectural [label=architectural fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_3 -> objects_3architectural
+	objects_3white [label=white fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_3 -> objects_3white
+	objects_4 [label=windowsill_4 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_4metal [label=metal fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_4 -> objects_4metal
+	objects_4flat [label=flat fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_4 -> objects_4flat
+	objects_4horizontal [label=horizontal fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_4 -> objects_4horizontal
+	objects_4dark [label=dark fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_4 -> objects_4dark
+	objects_4gray [label=gray fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_4 -> objects_4gray
+	objects_5 [label=plant_5 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_5narrow [label=narrow fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_5 -> objects_5narrow
+	objects_6 [label=plant_6 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
 	objects_6narrow [label=narrow fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
 	objects_6 -> objects_6narrow
-	objects_8 [label=cabinet_8 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_8tall [label=tall fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_8 -> objects_8tall
-	objects_8narrow [label=narrow fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_8 -> objects_8narrow
-	objects_9 [label="tv stand_9" fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_9small [label=small fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_9 -> objects_9small
-	objects_9big [label=big fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_9 -> objects_9big
-	objects_10 [label=picture_10 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_10tall [label=tall fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_10 -> objects_10tall
-	objects_11 [label=wall_11 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_11architectural [label=architectural fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_11 -> objects_11architectural
-	objects_12 [label=commode_12 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_12tall [label=tall fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_12 -> objects_12tall
-	objects_12elegant [label=elegant fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_12 -> objects_12elegant
-	objects_12big [label=big fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_12 -> objects_12big
-	objects_13 [label=commode_13 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_13tall [label=tall fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_13 -> objects_13tall
-	objects_13elegant [label=elegant fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_13 -> objects_13elegant
-	objects_13tall [label=tall fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_13 -> objects_13tall
-	objects_13narrow [label=narrow fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_13 -> objects_13narrow
-	objects_14 [label=curtain_14 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_15 [label=shelf_15 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_16 [label=lamp_16 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_16artificial [label=artificial fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_16 -> objects_16artificial
-	objects_17 [label=lamp_17 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_17artificial [label=artificial fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_17 -> objects_17artificial
-	objects_18 [label=lamp_18 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_18artificial [label=artificial fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_18 -> objects_18artificial
-	objects_19 [label=lamp_19 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_19artificial [label=artificial fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_19 -> objects_19artificial
-	objects_20 [label=lamp_20 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_20artificial [label=artificial fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_20 -> objects_20artificial
-	objects_24 [label=treadmill_24 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_27 [label=frame_27 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_27rectangular [label=rectangular fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_27 -> objects_27rectangular
-	objects_27white [label=white fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_27 -> objects_27white
-	objects_28 [label=frame_28 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_7 [label=plant_7 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_7tall [label=tall fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_7 -> objects_7tall
+	objects_8 [label=plant_8 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_9 [label=shades_9 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_9protective [label=protective fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_9 -> objects_9protective
+	objects_10 [label=shades_10 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_10protective [label=protective fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_10 -> objects_10protective
+	objects_11 [label=window_11 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_11glass [label=glass fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_11 -> objects_11glass
+	objects_11metal [label=metal fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_11 -> objects_11metal
+	objects_11closed [label=closed fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_11 -> objects_11closed
+	objects_11rectangular [label=rectangular fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_11 -> objects_11rectangular
+	objects_11wide [label=wide fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_11 -> objects_11wide
+	objects_12 [label=shades_12 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_12protective [label=protective fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_12 -> objects_12protective
+	objects_13 [label=plant_13 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_14 [label=wall_14 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_14flat [label=flat fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_14 -> objects_14flat
+	objects_14architectural [label=architectural fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_14 -> objects_14architectural
+	objects_14white [label=white fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_14 -> objects_14white
+	objects_15 [label=heater_15 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_15white [label=white fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_15 -> objects_15white
+	objects_15rectangular [label=rectangular fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_15 -> objects_15rectangular
+	objects_15low [label=low fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_15 -> objects_15low
+	objects_15wide [label=wide fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_15 -> objects_15wide
+	objects_16 [label="trash can_16" fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_17 [label=beanbag_17 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_17small [label=small fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_17 -> objects_17small
+	objects_18 [label=beanbag_18 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_18small [label=small fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_18 -> objects_18small
+	objects_19 [label=table_19 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_19wooden [label=wooden fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_19 -> objects_19wooden
+	objects_19rectangular [label=rectangular fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_19 -> objects_19rectangular
+	objects_19tidy [label=tidy fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_19 -> objects_19tidy
+	objects_19colorful [label=colorful fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_19 -> objects_19colorful
+	objects_19blue [label=blue fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_19 -> objects_19blue
+	objects_19green [label=green fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_19 -> objects_19green
+	objects_19low [label=low fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_19 -> objects_19low
+	objects_19narrow [label=narrow fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_19 -> objects_19narrow
+	objects_20 [label=cushion_20 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_20soft [label=soft fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_20 -> objects_20soft
+	objects_21 [label=cushion_21 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_21soft [label=soft fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_21 -> objects_21soft
+	objects_21tall [label=tall fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_21 -> objects_21tall
+	objects_21wide [label=wide fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_21 -> objects_21wide
+	objects_22 [label=sofa_22 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_22padded [label=padded fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_22 -> objects_22padded
+	"objects_22L-shaped" [label="L-shaped" fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_22 -> "objects_22L-shaped"
+	objects_22orange [label=orange fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_22 -> objects_22orange
+	objects_22pink [label=pink fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_22 -> objects_22pink
+	objects_22colorful [label=colorful fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_22 -> objects_22colorful
+	objects_22upholstered [label=upholstered fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_22 -> objects_22upholstered
+	objects_22wide [label=wide fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_22 -> objects_22wide
+	objects_23 [label=cushion_23 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_23soft [label=soft fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_23 -> objects_23soft
+	objects_23low [label=low fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_23 -> objects_23low
+	objects_24 [label=tv_24 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_24off [label=off fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_24 -> objects_24off
+	objects_24flat [label=flat fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_24 -> objects_24flat
+	objects_24electronic [label=electronic fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_24 -> objects_24electronic
+	objects_24black [label=black fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_24 -> objects_24black
+	objects_25 [label=commode_25 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_25tall [label=tall fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_25 -> objects_25tall
+	objects_25elegant [label=elegant fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_25 -> objects_25elegant
+	objects_25low [label=low fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_25 -> objects_25low
+	objects_26 [label=ceiling_26 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_26flat [label=flat fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_26 -> objects_26flat
+	objects_26overhead [label=overhead fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_26 -> objects_26overhead
+	objects_26upper [label=upper fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_26 -> objects_26upper
+	objects_26white [label=white fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_26 -> objects_26white
+	objects_27 [label=plant_27 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_27big [label=big fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_27 -> objects_27big
+	objects_28 [label=window_28 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_28glass [label=glass fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_28 -> objects_28glass
+	objects_28metal [label=metal fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_28 -> objects_28metal
+	objects_28closed [label=closed fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_28 -> objects_28closed
 	objects_28rectangular [label=rectangular fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
 	objects_28 -> objects_28rectangular
-	objects_29 [label=box_29 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_29rectangular [label=rectangular fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_29 -> objects_29rectangular
-	objects_29small [label=small fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_29 -> objects_29small
-	objects_30 [label=plant_30 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_30tall [label=tall fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_30 -> objects_30tall
-	objects_31 [label=stool_31 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_31simple [label=simple fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_31 -> objects_31simple
-	objects_32 [label=stool_32 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_32simple [label=simple fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_32 -> objects_32simple
-	objects_34 [label=plant_34 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_34low [label=low fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_34 -> objects_34low
-	objects_35 [label=stool_35 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_35simple [label=simple fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_35 -> objects_35simple
-	objects_36 [label=lamp_36 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_36artificial [label=artificial fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_36 -> objects_36artificial
-	objects_37 [label=curtain_37 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_38 [label=curtain_38 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_41 [label=item_41 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_41whole [label=whole fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_41 -> objects_41whole
-	objects_41individual [label=individual fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_41 -> objects_41individual
-	objects_42 [label=fan_42 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_43 [label=tv_43 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_43off [label=off fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_43 -> objects_43off
-	objects_43flat [label=flat fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_43 -> objects_43flat
-	objects_43electronic [label=electronic fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_43 -> objects_43electronic
-	objects_43black [label=black fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_43 -> objects_43black
-	objects_44 [label=plate_44 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_50 [label=decoration_50 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_51 [label=ceiling_51 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_51overhead [label=overhead fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_51 -> objects_51overhead
-	objects_51upper [label=upper fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_51 -> objects_51upper
-	objects_57 [label=pillow_57 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_57narrow [label=narrow fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_57 -> objects_57narrow
-	objects_58 [label=pillow_58 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_59 [label=pillow_59 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_60 [label=blanket_60 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_61 [label=pillow_61 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	objects_62 [label=pillow_62 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
-	"relationship_standing on0" [label="standing on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_2 -> "relationship_standing on0"
-	"relationship_standing on0" -> objects_1
-	"relationship_standing on1" [label="standing on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_3 -> "relationship_standing on1"
-	"relationship_standing on1" -> objects_1
-	"relationship_attached to2" [label="attached to" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_4 -> "relationship_attached to2"
-	"relationship_attached to2" -> objects_1
-	"relationship_attached to3" [label="attached to" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_5 -> "relationship_attached to3"
-	"relationship_attached to3" -> objects_4
-	"relationship_attached to4" [label="attached to" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_6 -> "relationship_attached to4"
-	"relationship_attached to4" -> objects_4
-	"relationship_attached to5" [label="attached to" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_8 -> "relationship_attached to5"
-	"relationship_attached to5" -> objects_4
+	objects_28white [label=white fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_28 -> objects_28white
+	objects_28big [label=big fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_28 -> objects_28big
+	objects_29 [label=light_29 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_29off [label=off fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_29 -> objects_29off
+	objects_29wide [label=wide fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_29 -> objects_29wide
+	objects_30 [label=light_30 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_30off [label=off fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_30 -> objects_30off
+	objects_30wide [label=wide fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_30 -> objects_30wide
+	objects_33 [label=window_33 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_33glass [label=glass fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_33 -> objects_33glass
+	objects_33closed [label=closed fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_33 -> objects_33closed
+	objects_33rectangular [label=rectangular fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_33 -> objects_33rectangular
+	objects_33low [label=low fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_33 -> objects_33low
+	objects_100 [label=window_100 fillcolor="#ec5d57" fontcolor=black height=0 margin="0.11, 0.11" shape=box style="filled,rounded" width=0.11]
+	objects_100glass [label=glass fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_100 -> objects_100glass
+	objects_100metal [label=metal fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_100 -> objects_100metal
+	objects_100closed [label=closed fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_100 -> objects_100closed
+	objects_100rectangular [label=rectangular fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_100 -> objects_100rectangular
+	objects_100narrow [label=narrow fillcolor="#51a7fa" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_100 -> objects_100narrow
+	"relationship_attached to
+same shape0" [label="attached to
+same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_2 -> "relationship_attached to
+same shape0"
+	"relationship_attached to
+same shape0" -> objects_1
+	"relationship_attached to
+same shape1" [label="attached to
+same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_3 -> "relationship_attached to
+same shape1"
+	"relationship_attached to
+same shape1" -> objects_1
+	"relationship_attached to
+same shape2" [label="attached to
+same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_4 -> "relationship_attached to
+same shape2"
+	"relationship_attached to
+same shape2" -> objects_3
+	"relationship_standing on3" [label="standing on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_5 -> "relationship_standing on3"
+	"relationship_standing on3" -> objects_4
+	"relationship_standing on4" [label="standing on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_6 -> "relationship_standing on4"
+	"relationship_standing on4" -> objects_4
+	"relationship_standing on5" [label="standing on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_7 -> "relationship_standing on5"
+	"relationship_standing on5" -> objects_4
 	"relationship_standing on6" [label="standing on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_9 -> "relationship_standing on6"
-	"relationship_standing on6" -> objects_1
+	objects_8 -> "relationship_standing on6"
+	"relationship_standing on6" -> objects_4
 	"relationship_attached to7" [label="attached to" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_10 -> "relationship_attached to7"
-	"relationship_attached to7" -> objects_4
-	"relationship_supported by8" [label="supported by" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_10 -> "relationship_supported by8"
-	"relationship_supported by8" -> objects_9
-	"relationship_attached to9" [label="attached to" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_11 -> "relationship_attached to9"
-	"relationship_attached to9" -> objects_1
-	"relationship_standing on10" [label="standing on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_12 -> "relationship_standing on10"
-	"relationship_standing on10" -> objects_1
+	objects_11 -> "relationship_attached to7"
+	"relationship_attached to7" -> objects_3
+	"relationship_standing on8" [label="standing on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_13 -> "relationship_standing on8"
+	"relationship_standing on8" -> objects_4
+	"relationship_attached to
+same shape9" [label="attached to
+same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_14 -> "relationship_attached to
+same shape9"
+	"relationship_attached to
+same shape9" -> objects_1
+	"relationship_connected to
+same color10" [label="connected to
+same color" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_15 -> "relationship_connected to
+same color10"
+	"relationship_connected to
+same color10" -> objects_3
 	"relationship_standing on11" [label="standing on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_13 -> "relationship_standing on11"
+	objects_16 -> "relationship_standing on11"
 	"relationship_standing on11" -> objects_1
-	"relationship_hanging on12" [label="hanging on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_14 -> "relationship_hanging on12"
-	"relationship_hanging on12" -> objects_11
-	"relationship_attached to13" [label="attached to" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_15 -> "relationship_attached to13"
-	"relationship_attached to13" -> objects_11
-	"relationship_standing on14" [label="standing on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_16 -> "relationship_standing on14"
-	"relationship_standing on14" -> objects_15
+	"relationship_standing on
+cleaner than12" [label="standing on
+cleaner than" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_19 -> "relationship_standing on
+cleaner than12"
+	"relationship_standing on
+cleaner than12" -> objects_1
+	relationship_cover13 [label=cover fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_20 -> relationship_cover13
+	relationship_cover13 -> objects_22
+	"relationship_lying on14" [label="lying on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_21 -> "relationship_lying on14"
+	"relationship_lying on14" -> objects_22
 	"relationship_standing on15" [label="standing on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_18 -> "relationship_standing on15"
-	"relationship_standing on15" -> objects_15
-	"relationship_standing on16" [label="standing on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_19 -> "relationship_standing on16"
-	"relationship_standing on16" -> objects_15
+	objects_22 -> "relationship_standing on15"
+	"relationship_standing on15" -> objects_1
+	"relationship_leaning against
+same object type16" [label="leaning against
+same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_23 -> "relationship_leaning against
+same object type16"
+	"relationship_leaning against
+same object type16" -> objects_21
 	"relationship_standing on17" [label="standing on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_20 -> "relationship_standing on17"
-	"relationship_standing on17" -> objects_15
+	objects_24 -> "relationship_standing on17"
+	"relationship_standing on17" -> objects_25
 	"relationship_standing on18" [label="standing on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_27 -> "relationship_standing on18"
-	"relationship_standing on18" -> objects_12
-	"relationship_standing on19" [label="standing on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_28 -> "relationship_standing on19"
-	"relationship_standing on19" -> objects_12
-	"relationship_standing in20" [label="standing in" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_29 -> "relationship_standing in20"
-	"relationship_standing in20" -> objects_12
-	"relationship_standing on21" [label="standing on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_30 -> "relationship_standing on21"
-	"relationship_standing on21" -> objects_32
+	objects_25 -> "relationship_standing on18"
+	"relationship_standing on18" -> objects_1
+	"relationship_attached to
+same color
+same shape19" [label="attached to
+same color
+same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_26 -> "relationship_attached to
+same color
+same shape19"
+	"relationship_attached to
+same color
+same shape19" -> objects_2
+	"relationship_attached to
+same color
+same shape20" [label="attached to
+same color
+same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_26 -> "relationship_attached to
+same color
+same shape20"
+	"relationship_attached to
+same color
+same shape20" -> objects_3
+	"relationship_attached to
+same shape
+same color21" [label="attached to
+same shape
+same color" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_26 -> "relationship_attached to
+same shape
+same color21"
+	"relationship_attached to
+same shape
+same color21" -> objects_14
 	"relationship_standing on22" [label="standing on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_31 -> "relationship_standing on22"
+	objects_27 -> "relationship_standing on22"
 	"relationship_standing on22" -> objects_1
-	"relationship_standing on23" [label="standing on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_32 -> "relationship_standing on23"
-	"relationship_standing on23" -> objects_1
-	"relationship_standing on24" [label="standing on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_34 -> "relationship_standing on24"
-	"relationship_standing on24" -> objects_32
-	"relationship_standing on25" [label="standing on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_35 -> "relationship_standing on25"
-	"relationship_standing on25" -> objects_1
-	"relationship_hanging on26" [label="hanging on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_36 -> "relationship_hanging on26"
-	"relationship_hanging on26" -> objects_4
-	"relationship_hanging on27" [label="hanging on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_37 -> "relationship_hanging on27"
-	"relationship_hanging on27" -> objects_11
-	"relationship_leaning against28" [label="leaning against" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_41 -> "relationship_leaning against28"
-	"relationship_leaning against28" -> objects_9
-	"relationship_standing on29" [label="standing on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_43 -> "relationship_standing on29"
-	"relationship_standing on29" -> objects_9
-	"relationship_supported by30" [label="supported by" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_44 -> "relationship_supported by30"
-	"relationship_supported by30" -> objects_3
-	"relationship_standing on31" [label="standing on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_50 -> "relationship_standing on31"
-	"relationship_standing on31" -> objects_1
-	"relationship_attached to32" [label="attached to" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_51 -> "relationship_attached to32"
-	"relationship_attached to32" -> objects_4
-	"relationship_attached to33" [label="attached to" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_51 -> "relationship_attached to33"
-	"relationship_attached to33" -> objects_11
-	"relationship_lying on34" [label="lying on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_57 -> "relationship_lying on34"
-	"relationship_lying on34" -> objects_2
-	"relationship_lying on35" [label="lying on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_58 -> "relationship_lying on35"
-	"relationship_lying on35" -> objects_2
-	"relationship_lying on36" [label="lying on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_60 -> "relationship_lying on36"
-	"relationship_lying on36" -> objects_2
-	"relationship_lying on37" [label="lying on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_61 -> "relationship_lying on37"
-	"relationship_lying on37" -> objects_2
-	"relationship_lying on38" [label="lying on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_62 -> "relationship_lying on38"
-	"relationship_lying on38" -> objects_2
-	"relationship_standing on39" [label="standing on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_17 -> "relationship_standing on39"
-	"relationship_standing on39" -> objects_15
-	"relationship_standing on40" [label="standing on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_30 -> "relationship_standing on40"
-	"relationship_standing on40" -> objects_31
-	"relationship_hanging on41" [label="hanging on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_38 -> "relationship_hanging on41"
-	"relationship_hanging on41" -> objects_11
-	"relationship_lying on42" [label="lying on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_59 -> "relationship_lying on42"
-	"relationship_lying on42" -> objects_2
-	"relationship_close by43" [label="close by" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_2 -> "relationship_close by43"
-	"relationship_close by43" -> objects_3
-	"relationship_right
-close by44" [label="right
-close by" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_2 -> "relationship_right
-close by44"
-	"relationship_right
-close by44" -> objects_9
+	"relationship_attached to
+same color23" [label="attached to
+same color" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_28 -> "relationship_attached to
+same color23"
+	"relationship_attached to
+same color23" -> objects_26
+	"relationship_hanging on24" [label="hanging on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_29 -> "relationship_hanging on24"
+	"relationship_hanging on24" -> objects_26
+	"relationship_hanging on25" [label="hanging on" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_30 -> "relationship_hanging on25"
+	"relationship_hanging on25" -> objects_26
+	"relationship_attached to26" [label="attached to" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_100 -> "relationship_attached to26"
+	"relationship_attached to26" -> objects_3
+	"relationship_supported by27" [label="supported by" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_28 -> "relationship_supported by27"
+	"relationship_supported by27" -> objects_1
+	"relationship_supported by28" [label="supported by" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_33 -> "relationship_supported by28"
+	"relationship_supported by28" -> objects_1
+	"relationship_attached to29" [label="attached to" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_33 -> "relationship_attached to29"
+	"relationship_attached to29" -> objects_26
+	"relationship_close by30" [label="close by" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_4 -> "relationship_close by30"
+	"relationship_close by30" -> objects_11
+	"relationship_close by31" [label="close by" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_4 -> "relationship_close by31"
+	"relationship_close by31" -> objects_15
+	"relationship_close by
+behind32" [label="close by
+behind" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_4 -> "relationship_close by
+behind32"
+	"relationship_close by
+behind32" -> objects_100
 	"relationship_behind
-left45" [label="behind
-left" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_2 -> "relationship_behind
-left45"
+close by
+left
+same object type33" [label="behind
+close by
+left
+same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_5 -> "relationship_behind
+close by
+left
+same object type33"
 	"relationship_behind
-left45" -> objects_12
-	"relationship_close by
-left46" [label="close by
-left" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_2 -> "relationship_close by
-left46"
-	"relationship_close by
-left46" -> objects_50
-	"relationship_close by47" [label="close by" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_3 -> "relationship_close by47"
-	"relationship_close by47" -> objects_2
-	relationship_right48 [label=right fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_3 -> relationship_right48
-	relationship_right48 -> objects_9
-	relationship_left49 [label=left fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_3 -> relationship_left49
-	relationship_left49 -> objects_12
-	relationship_left50 [label=left fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_3 -> relationship_left50
-	relationship_left50 -> objects_13
-	relationship_right51 [label=right fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_3 -> relationship_right51
-	relationship_right51 -> objects_32
-	relationship_right52 [label=right fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_3 -> relationship_right52
-	relationship_right52 -> objects_35
-	relationship_right53 [label=right fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_5 -> relationship_right53
-	relationship_right53 -> objects_6
-	relationship_right54 [label=right fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_5 -> relationship_right54
-	relationship_right54 -> objects_8
-	"relationship_right
-close by55" [label="right
-close by" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_5 -> "relationship_right
-close by55"
-	"relationship_right
-close by55" -> objects_10
-	"relationship_close by
-left56" [label="close by
-left" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_5 -> "relationship_close by
-left56"
-	"relationship_close by
-left56" -> objects_36
-	relationship_left57 [label=left fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_6 -> relationship_left57
-	relationship_left57 -> objects_5
+close by
+left
+same object type33" -> objects_6
 	"relationship_left
-same object type58" [label="left
+same object type34" [label="left
+same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_5 -> "relationship_left
+same object type34"
+	"relationship_left
+same object type34" -> objects_7
+	"relationship_left
+same object type35" [label="left
+same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_5 -> "relationship_left
+same object type35"
+	"relationship_left
+same object type35" -> objects_8
+	"relationship_front
+right
+close by
+same object type36" [label="front
+right
+close by
+same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_6 -> "relationship_front
+right
+close by
+same object type36"
+	"relationship_front
+right
+close by
+same object type36" -> objects_5
+	"relationship_close by
+same object type37" [label="close by
+same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_6 -> "relationship_close by
+same object type37"
+	"relationship_close by
+same object type37" -> objects_7
+	"relationship_left
+same object type38" [label="left
 same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
 	objects_6 -> "relationship_left
-same object type58"
+same object type38"
 	"relationship_left
-same object type58" -> objects_8
-	relationship_left59 [label=left fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_6 -> relationship_left59
-	relationship_left59 -> objects_10
-	relationship_left60 [label=left fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_8 -> relationship_left60
-	relationship_left60 -> objects_5
+same object type38" -> objects_8
+	"relationship_left
+same object type39" [label="left
+same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_6 -> "relationship_left
+same object type39"
+	"relationship_left
+same object type39" -> objects_13
 	"relationship_right
-same object type61" [label="right
+same object type40" [label="right
+same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_7 -> "relationship_right
+same object type40"
+	"relationship_right
+same object type40" -> objects_5
+	"relationship_close by
+same object type41" [label="close by
+same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_7 -> "relationship_close by
+same object type41"
+	"relationship_close by
+same object type41" -> objects_6
+	"relationship_close by
+left
+same as
+same object type42" [label="close by
+left
+same as
+same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_7 -> "relationship_close by
+left
+same as
+same object type42"
+	"relationship_close by
+left
+same as
+same object type42" -> objects_8
+	"relationship_behind
+left
+same object type43" [label="behind
+left
+same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_7 -> "relationship_behind
+left
+same object type43"
+	"relationship_behind
+left
+same object type43" -> objects_13
+	"relationship_right
+same object type44" [label="right
 same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
 	objects_8 -> "relationship_right
-same object type61"
+same object type44"
 	"relationship_right
-same object type61" -> objects_6
-	"relationship_behind
-left62" [label="behind
-left" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_8 -> "relationship_behind
-left62"
-	"relationship_behind
-left62" -> objects_10
-	"relationship_close by
-left63" [label="close by
-left" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_9 -> "relationship_close by
-left63"
-	"relationship_close by
-left63" -> objects_2
-	relationship_left64 [label=left fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_9 -> relationship_left64
-	relationship_left64 -> objects_3
-	relationship_behind65 [label=behind fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_9 -> relationship_behind65
-	relationship_behind65 -> objects_13
-	"relationship_behind
-left66" [label="behind
-left" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_9 -> "relationship_behind
-left66"
-	"relationship_behind
-left66" -> objects_31
-	"relationship_behind
-left67" [label="behind
-left" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_9 -> "relationship_behind
-left67"
-	"relationship_behind
-left67" -> objects_32
-	"relationship_behind
-left68" [label="behind
-left" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_9 -> "relationship_behind
-left68"
-	"relationship_behind
-left68" -> objects_35
-	"relationship_close by
-left69" [label="close by
-left" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_10 -> "relationship_close by
-left69"
-	"relationship_close by
-left69" -> objects_5
-	relationship_right70 [label=right fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_10 -> relationship_right70
-	relationship_right70 -> objects_6
-	"relationship_front
-right71" [label="front
-right" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_10 -> "relationship_front
-right71"
-	"relationship_front
-right71" -> objects_8
-	relationship_left72 [label=left fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_10 -> relationship_left72
-	relationship_left72 -> objects_36
-	"relationship_close by73" [label="close by" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_10 -> "relationship_close by73"
-	"relationship_close by73" -> objects_41
+same object type44" -> objects_5
 	"relationship_right
-close by
-front74" [label="right
-close by
-front" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_10 -> "relationship_right
-close by
-front74"
-	"relationship_right
-close by
-front74" -> objects_43
-	"relationship_front
-right75" [label="front
-right" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_12 -> "relationship_front
-right75"
-	"relationship_front
-right75" -> objects_2
-	relationship_right76 [label=right fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_12 -> relationship_right76
-	relationship_right76 -> objects_3
-	"relationship_right
-close by
-behind
-same object type77" [label="right
-close by
-behind
+same object type45" [label="right
 same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_12 -> "relationship_right
-close by
-behind
-same object type77"
+	objects_8 -> "relationship_right
+same object type45"
+	"relationship_right
+same object type45" -> objects_6
 	"relationship_right
 close by
-behind
-same object type77" -> objects_13
+same as
+same object type46" [label="right
+close by
+same as
+same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_8 -> "relationship_right
+close by
+same as
+same object type46"
 	"relationship_right
-behind78" [label="right
-behind" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_12 -> "relationship_right
-behind78"
-	"relationship_right
-behind78" -> objects_31
-	relationship_behind79 [label=behind fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_12 -> relationship_behind79
-	relationship_behind79 -> objects_32
-	relationship_behind80 [label=behind fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_12 -> relationship_behind80
-	relationship_behind80 -> objects_35
-	relationship_front81 [label=front fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_12 -> relationship_front81
-	relationship_front81 -> objects_50
-	relationship_right82 [label=right fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_13 -> relationship_right82
-	relationship_right82 -> objects_3
-	relationship_front83 [label=front fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_13 -> relationship_front83
-	relationship_front83 -> objects_9
-	"relationship_front
+close by
+same as
+same object type46" -> objects_7
+	"relationship_left
+same object type47" [label="left
+same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_8 -> "relationship_left
+same object type47"
+	"relationship_left
+same object type47" -> objects_13
+	"relationship_close by48" [label="close by" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_11 -> "relationship_close by48"
+	"relationship_close by48" -> objects_4
+	"relationship_behind
 close by
 left
-same object type84" [label="front
-close by
-left
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_13 -> "relationship_front
-close by
-left
-same object type84"
-	"relationship_front
-close by
-left
-same object type84" -> objects_12
-	"relationship_right
-behind85" [label="right
-behind" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_13 -> "relationship_right
-behind85"
-	"relationship_right
-behind85" -> objects_31
-	"relationship_right
-behind86" [label="right
-behind" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_13 -> "relationship_right
-behind86"
-	"relationship_right
-behind86" -> objects_32
-	relationship_right87 [label=right fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_13 -> relationship_right87
-	relationship_right87 -> objects_35
-	relationship_left88 [label=left fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_13 -> relationship_left88
-	relationship_left88 -> objects_50
-	relationship_left89 [label=left fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_14 -> relationship_left89
-	relationship_left89 -> objects_15
-	"relationship_right
-close by
-behind
-same object type90" [label="right
-close by
-behind
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_14 -> "relationship_right
-close by
-behind
-same object type90"
-	"relationship_right
-close by
-behind
-same object type90" -> objects_37
-	relationship_right91 [label=right fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_15 -> relationship_right91
-	relationship_right91 -> objects_14
-	"relationship_left
-same object type92" [label="left
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_16 -> "relationship_left
-same object type92"
-	"relationship_left
-same object type92" -> objects_18
-	"relationship_left
-same object type93" [label="left
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_16 -> "relationship_left
-same object type93"
-	"relationship_left
-same object type93" -> objects_19
-	"relationship_left
-same object type94" [label="left
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_16 -> "relationship_left
-same object type94"
-	"relationship_left
-same object type94" -> objects_20
-	"relationship_right
-same object type95" [label="right
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_18 -> "relationship_right
-same object type95"
-	"relationship_right
-same object type95" -> objects_16
-	"relationship_left
-same object type96" [label="left
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_18 -> "relationship_left
-same object type96"
-	"relationship_left
-same object type96" -> objects_19
-	"relationship_left
-same object type97" [label="left
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_18 -> "relationship_left
-same object type97"
-	"relationship_left
-same object type97" -> objects_20
-	"relationship_right
-same object type98" [label="right
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_19 -> "relationship_right
-same object type98"
-	"relationship_right
-same object type98" -> objects_16
-	"relationship_right
-same object type99" [label="right
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_19 -> "relationship_right
-same object type99"
-	"relationship_right
-same object type99" -> objects_18
-	"relationship_left
-same object type100" [label="left
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_19 -> "relationship_left
-same object type100"
-	"relationship_left
-same object type100" -> objects_20
-	"relationship_right
-same object type101" [label="right
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_20 -> "relationship_right
-same object type101"
-	"relationship_right
-same object type101" -> objects_16
-	"relationship_right
-same object type102" [label="right
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_20 -> "relationship_right
-same object type102"
-	"relationship_right
-same object type102" -> objects_18
-	"relationship_right
-same object type103" [label="right
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_20 -> "relationship_right
-same object type103"
-	"relationship_right
-same object type103" -> objects_19
-	"relationship_front
-close by
-left
-same shape
-same object type104" [label="front
-close by
-left
-same shape
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_27 -> "relationship_front
-close by
-left
-same shape
-same object type104"
-	"relationship_front
-close by
-left
-same shape
-same object type104" -> objects_28
-	"relationship_front
-left105" [label="front
-left" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_27 -> "relationship_front
-left105"
-	"relationship_front
-left105" -> objects_29
-	"relationship_right
-close by
-behind
+same material
+same state
 same object type
-same shape106" [label="right
+same shape49" [label="behind
 close by
-behind
+left
+same material
+same state
 same object type
 same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_11 -> "relationship_behind
+close by
+left
+same material
+same state
+same object type
+same shape49"
+	"relationship_behind
+close by
+left
+same material
+same state
+same object type
+same shape49" -> objects_100
+	"relationship_right
+same object type50" [label="right
+same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_13 -> "relationship_right
+same object type50"
+	"relationship_right
+same object type50" -> objects_6
+	"relationship_front
+right
+same object type51" [label="front
+right
+same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_13 -> "relationship_front
+right
+same object type51"
+	"relationship_front
+right
+same object type51" -> objects_7
+	"relationship_right
+same object type52" [label="right
+same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_13 -> "relationship_right
+same object type52"
+	"relationship_right
+same object type52" -> objects_8
+	"relationship_close by53" [label="close by" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_15 -> "relationship_close by53"
+	"relationship_close by53" -> objects_4
+	"relationship_behind
+same shape54" [label="behind
+same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_15 -> "relationship_behind
+same shape54"
+	"relationship_behind
+same shape54" -> objects_100
+	relationship_left55 [label=left fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_16 -> relationship_left55
+	relationship_left55 -> objects_22
+	relationship_left56 [label=left fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_16 -> relationship_left56
+	relationship_left56 -> objects_25
+	"relationship_close by
+same texture57" [label="close by
+same texture" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_19 -> "relationship_close by
+same texture57"
+	"relationship_close by
+same texture57" -> objects_22
+	relationship_right58 [label=right fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_19 -> relationship_right58
+	relationship_right58 -> objects_25
+	relationship_left59 [label=left fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_19 -> relationship_left59
+	relationship_left59 -> objects_27
+	relationship_right60 [label=right fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_22 -> relationship_right60
+	relationship_right60 -> objects_16
+	"relationship_close by
+same texture61" [label="close by
+same texture" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_22 -> "relationship_close by
+same texture61"
+	"relationship_close by
+same texture61" -> objects_19
+	"relationship_close by
+left62" [label="close by
+left" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_22 -> "relationship_close by
+left62"
+	"relationship_close by
+left62" -> objects_27
+	relationship_right63 [label=right fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_25 -> relationship_right63
+	relationship_right63 -> objects_16
+	relationship_left64 [label=left fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_25 -> relationship_left64
+	relationship_left64 -> objects_19
+	relationship_behind65 [label=behind fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_25 -> relationship_behind65
+	relationship_behind65 -> objects_27
+	relationship_right66 [label=right fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_27 -> relationship_right66
+	relationship_right66 -> objects_19
+	"relationship_right
+close by67" [label="right
+close by" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_27 -> "relationship_right
+close by67"
+	"relationship_right
+close by67" -> objects_22
+	relationship_front68 [label=front fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_27 -> relationship_front68
+	relationship_front68 -> objects_25
+	relationship_right69 [label=right fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_28 -> relationship_right69
+	relationship_right69 -> objects_29
+	"relationship_right
+close by70" [label="right
+close by" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
 	objects_28 -> "relationship_right
-close by
-behind
+close by70"
+	"relationship_right
+close by70" -> objects_30
+	"relationship_close by
+same state
 same object type
-same shape106"
+same shape71" [label="close by
+same state
+same object type
+same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_28 -> "relationship_close by
+same state
+same object type
+same shape71"
+	"relationship_close by
+same state
+same object type
+same shape71" -> objects_33
+	relationship_left72 [label=left fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_29 -> relationship_left72
+	relationship_left72 -> objects_28
+	"relationship_close by
+left
+same state
+same object type73" [label="close by
+left
+same state
+same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_29 -> "relationship_close by
+left
+same state
+same object type73"
+	"relationship_close by
+left
+same state
+same object type73" -> objects_30
+	"relationship_close by
+left74" [label="close by
+left" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_30 -> "relationship_close by
+left74"
+	"relationship_close by
+left74" -> objects_28
 	"relationship_right
 close by
-behind
-same object type
-same shape106" -> objects_27
-	relationship_left107 [label=left fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_28 -> relationship_left107
-	relationship_left107 -> objects_29
-	"relationship_right
-behind108" [label="right
-behind" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_29 -> "relationship_right
-behind108"
-	"relationship_right
-behind108" -> objects_27
-	relationship_right109 [label=right fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_29 -> relationship_right109
-	relationship_right109 -> objects_28
-	"relationship_right
-same object type110" [label="right
+same state
+same object type75" [label="right
+close by
+same state
 same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
 	objects_30 -> "relationship_right
-same object type110"
-	"relationship_right
-same object type110" -> objects_34
-	"relationship_front
-right111" [label="front
-right" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_31 -> "relationship_front
-right111"
-	"relationship_front
-right111" -> objects_9
-	"relationship_front
-left112" [label="front
-left" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_31 -> "relationship_front
-left112"
-	"relationship_front
-left112" -> objects_12
-	"relationship_front
-left113" [label="front
-left" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_31 -> "relationship_front
-left113"
-	"relationship_front
-left113" -> objects_13
+close by
+same state
+same object type75"
 	"relationship_right
 close by
-behind
-same object type114" [label="right
-close by
-behind
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_31 -> "relationship_right
-close by
-behind
-same object type114"
-	"relationship_right
-close by
-behind
-same object type114" -> objects_32
-	"relationship_right
-front
-same object type115" [label="right
-front
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_31 -> "relationship_right
-front
-same object type115"
-	"relationship_right
-front
-same object type115" -> objects_35
-	relationship_left116 [label=left fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_32 -> relationship_left116
-	relationship_left116 -> objects_3
+same state
+same object type75" -> objects_29
+	"relationship_close by
+same shape
+same object type
+same state76" [label="close by
+same shape
+same object type
+same state" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_33 -> "relationship_close by
+same shape
+same object type
+same state76"
+	"relationship_close by
+same shape
+same object type
+same state76" -> objects_28
 	"relationship_front
-right117" [label="front
-right" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_32 -> "relationship_front
-right117"
-	"relationship_front
-right117" -> objects_9
-	relationship_front118 [label=front fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_32 -> relationship_front118
-	relationship_front118 -> objects_12
-	"relationship_front
-left119" [label="front
-left" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_32 -> "relationship_front
-left119"
-	"relationship_front
-left119" -> objects_13
-	"relationship_front
-close by
-left
-same object type120" [label="front
-close by
-left
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_32 -> "relationship_front
-close by
-left
-same object type120"
-	"relationship_front
-close by
-left
-same object type120" -> objects_31
-	"relationship_right
-close by
-front
-same object type121" [label="right
-close by
-front
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_32 -> "relationship_right
-close by
-front
-same object type121"
-	"relationship_right
-close by
-front
-same object type121" -> objects_35
-	"relationship_left
-same object type122" [label="left
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_34 -> "relationship_left
-same object type122"
-	"relationship_left
-same object type122" -> objects_30
-	relationship_left123 [label=left fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_35 -> relationship_left123
-	relationship_left123 -> objects_3
-	"relationship_front
-right124" [label="front
-right" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_35 -> "relationship_front
-right124"
-	"relationship_front
-right124" -> objects_9
-	relationship_front125 [label=front fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_35 -> relationship_front125
-	relationship_front125 -> objects_12
-	relationship_left126 [label=left fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_35 -> relationship_left126
-	relationship_left126 -> objects_13
-	"relationship_behind
-left
-same object type127" [label="behind
-left
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_35 -> "relationship_behind
-left
-same object type127"
-	"relationship_behind
-left
-same object type127" -> objects_31
-	"relationship_behind
-close by
-left
-same object type128" [label="behind
-close by
-left
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_35 -> "relationship_behind
-close by
-left
-same object type128"
-	"relationship_behind
-close by
-left
-same object type128" -> objects_32
-	"relationship_right
-close by129" [label="right
+close by77" [label="front
 close by" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_36 -> "relationship_right
-close by129"
-	"relationship_right
-close by129" -> objects_5
-	relationship_right130 [label=right fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_36 -> relationship_right130
-	relationship_right130 -> objects_10
+	objects_100 -> "relationship_front
+close by77"
 	"relationship_front
+close by77" -> objects_4
+	"relationship_front
+right
 close by
-left
-same object type131" [label="front
+same state
+same shape
+same material
+same object type78" [label="front
+right
 close by
-left
+same state
+same shape
+same material
 same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_37 -> "relationship_front
+	objects_100 -> "relationship_front
+right
 close by
-left
+same state
+same shape
+same material
+same object type78"
+	"relationship_front
+right
+close by
+same state
+same shape
+same material
+same object type78" -> objects_11
+	"relationship_front
+same shape79" [label="front
+same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_100 -> "relationship_front
+same shape79"
+	"relationship_front
+same shape79" -> objects_15
+	"relationship_same symmetry as80" [label="same symmetry as" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_16 -> "relationship_same symmetry as80"
+	"relationship_same symmetry as80" -> objects_13
+	"relationship_same symmetry as81" [label="same symmetry as" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_13 -> "relationship_same symmetry as81"
+	"relationship_same symmetry as81" -> objects_16
+	"relationship_same shape82" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_15 -> "relationship_same shape82"
+	"relationship_same shape82" -> objects_33
+	"relationship_same object type
+same shape
+same color83" [label="same object type
+same shape
+same color" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_2 -> "relationship_same object type
+same shape
+same color83"
+	"relationship_same object type
+same shape
+same color83" -> objects_14
+	"relationship_same shape84" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_15 -> "relationship_same shape84"
+	"relationship_same shape84" -> objects_19
+	"relationship_same object type85" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_27 -> "relationship_same object type85"
+	"relationship_same object type85" -> objects_13
+	"relationship_same object type86" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_10 -> "relationship_same object type86"
+	"relationship_same object type86" -> objects_9
+	"relationship_same shape87" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_4 -> "relationship_same shape87"
+	"relationship_same shape87" -> objects_14
+	"relationship_same color88" [label="same color" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_28 -> "relationship_same color88"
+	"relationship_same color88" -> objects_2
+	"relationship_same object type89" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_27 -> "relationship_same object type89"
+	"relationship_same object type89" -> objects_5
+	"relationship_same color
+same shape
+same object type90" [label="same color
+same shape
+same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_3 -> "relationship_same color
+same shape
+same object type90"
+	"relationship_same color
+same shape
+same object type90" -> objects_14
+	"relationship_same shape
+same color91" [label="same shape
+same color" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_15 -> "relationship_same shape
+same color91"
+	"relationship_same shape
+same color91" -> objects_28
+	"relationship_same state
+same shape
+same object type
+same material92" [label="same state
+same shape
+same object type
+same material" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_11 -> "relationship_same state
+same shape
+same object type
+same material92"
+	"relationship_same state
+same shape
+same object type
+same material92" -> objects_28
+	"relationship_brighter than
+same shape93" [label="brighter than
+same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_14 -> "relationship_brighter than
+same shape93"
+	"relationship_brighter than
+same shape93" -> objects_24
+	"relationship_same state
+same object type
+same shape94" [label="same state
+same object type
+same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_100 -> "relationship_same state
+same object type
+same shape94"
+	"relationship_same state
+same object type
+same shape94" -> objects_33
+	"relationship_same color
+same object type
+same shape95" [label="same color
+same object type
+same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_14 -> "relationship_same color
+same object type
+same shape95"
+	"relationship_same color
+same object type
+same shape95" -> objects_2
+	"relationship_same shape96" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_4 -> "relationship_same shape96"
+	"relationship_same shape96" -> objects_24
+	"relationship_same color97" [label="same color" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_14 -> "relationship_same color97"
+	"relationship_same color97" -> objects_28
+	"relationship_same state
+same shape
+same object type98" [label="same state
+same shape
+same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_33 -> "relationship_same state
+same shape
+same object type98"
+	"relationship_same state
+same shape
+same object type98" -> objects_11
+	"relationship_same shape99" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_19 -> "relationship_same shape99"
+	"relationship_same shape99" -> objects_28
+	"relationship_same shape
+darker than100" [label="same shape
+darker than" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_24 -> "relationship_same shape
+darker than100"
+	"relationship_same shape
+darker than100" -> objects_26
+	"relationship_same color101" [label="same color" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_3 -> "relationship_same color101"
+	"relationship_same color101" -> objects_15
+	"relationship_same color
+same shape102" [label="same color
+same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_14 -> "relationship_same color
+same shape102"
+	"relationship_same color
+same shape102" -> objects_26
+	"relationship_same shape
+same state
+same object type
+same material103" [label="same shape
+same state
+same object type
+same material" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_100 -> "relationship_same shape
+same state
+same object type
+same material103"
+	"relationship_same shape
+same state
+same object type
+same material103" -> objects_28
+	"relationship_same object type104" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_27 -> "relationship_same object type104"
+	"relationship_same object type104" -> objects_8
+	"relationship_same shape105" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_2 -> "relationship_same shape105"
+	"relationship_same shape105" -> objects_4
+	"relationship_same object type106" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_20 -> "relationship_same object type106"
+	"relationship_same object type106" -> objects_23
+	"relationship_same object type107" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_13 -> "relationship_same object type107"
+	"relationship_same object type107" -> objects_5
+	"relationship_same shape108" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_4 -> "relationship_same shape108"
+	"relationship_same shape108" -> objects_26
+	"relationship_same object type
+same state
+same material
+same shape109" [label="same object type
+same state
+same material
+same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_28 -> "relationship_same object type
+same state
+same material
+same shape109"
+	"relationship_same object type
+same state
+same material
+same shape109" -> objects_100
+	"relationship_brighter than
+same shape110" [label="brighter than
+same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_3 -> "relationship_brighter than
+same shape110"
+	"relationship_brighter than
+same shape110" -> objects_24
+	"relationship_darker than
+same shape111" [label="darker than
+same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_24 -> "relationship_darker than
+same shape111"
+	"relationship_darker than
+same shape111" -> objects_14
+	"relationship_darker than
+same shape112" [label="darker than
+same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_24 -> "relationship_darker than
+same shape112"
+	"relationship_darker than
+same shape112" -> objects_2
+	"relationship_same object type113" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_27 -> "relationship_same object type113"
+	"relationship_same object type113" -> objects_7
+	"relationship_same color114" [label="same color" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_2 -> "relationship_same color114"
+	"relationship_same color114" -> objects_15
+	"relationship_same shape
+same material
+same object type
+same state115" [label="same shape
+same material
+same object type
+same state" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_28 -> "relationship_same shape
+same material
+same object type
+same state115"
+	"relationship_same shape
+same material
+same object type
+same state115" -> objects_11
+	"relationship_same object type116" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_9 -> "relationship_same object type116"
+	"relationship_same object type116" -> objects_12
+	"relationship_same color117" [label="same color" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_15 -> "relationship_same color117"
+	"relationship_same color117" -> objects_2
+	"relationship_same shape118" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_26 -> "relationship_same shape118"
+	"relationship_same shape118" -> objects_4
+	"relationship_same shape119" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_1 -> "relationship_same shape119"
+	"relationship_same shape119" -> objects_26
+	"relationship_same object type
+same shape
+same color120" [label="same object type
+same shape
+same color" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_3 -> "relationship_same object type
+same shape
+same color120"
+	"relationship_same object type
+same shape
+same color120" -> objects_2
+	"relationship_same shape
+brighter than121" [label="same shape
+brighter than" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_26 -> "relationship_same shape
+brighter than121"
+	"relationship_same shape
+brighter than121" -> objects_24
+	"relationship_same shape122" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_14 -> "relationship_same shape122"
+	"relationship_same shape122" -> objects_4
+	"relationship_same shape123" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_1 -> "relationship_same shape123"
+	"relationship_same shape123" -> objects_24
+	"relationship_same state
+same shape
+same object type124" [label="same state
+same shape
+same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_11 -> "relationship_same state
+same shape
+same object type124"
+	"relationship_same state
+same shape
+same object type124" -> objects_33
+	"relationship_same shape125" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_1 -> "relationship_same shape125"
+	"relationship_same shape125" -> objects_4
+	"relationship_same shape126" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_1 -> "relationship_same shape126"
+	"relationship_same shape126" -> objects_3
+	"relationship_same shape
+darker than127" [label="same shape
+darker than" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_24 -> "relationship_same shape
+darker than127"
+	"relationship_same shape
+darker than127" -> objects_3
+	"relationship_same shape
+same object type
+same color128" [label="same shape
+same object type
+same color" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_14 -> "relationship_same shape
+same object type
+same color128"
+	"relationship_same shape
+same object type
+same color128" -> objects_3
+	"relationship_same shape129" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_4 -> "relationship_same shape129"
+	"relationship_same shape129" -> objects_2
+	"relationship_same shape130" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_24 -> "relationship_same shape130"
+	"relationship_same shape130" -> objects_4
+	"relationship_same shape
+same state
+same object type131" [label="same shape
+same state
+same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_33 -> "relationship_same shape
+same state
 same object type131"
-	"relationship_front
-close by
-left
-same object type131" -> objects_14
-	"relationship_close by132" [label="close by" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_41 -> "relationship_close by132"
-	"relationship_close by132" -> objects_10
-	"relationship_right
-close by
-front133" [label="right
-close by
-front" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_41 -> "relationship_right
-close by
-front133"
-	"relationship_right
-close by
-front133" -> objects_43
-	"relationship_behind
-close by
-left134" [label="behind
-close by
-left" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_43 -> "relationship_behind
-close by
-left134"
-	"relationship_behind
-close by
-left134" -> objects_10
-	"relationship_behind
-close by
-left135" [label="behind
-close by
-left" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_43 -> "relationship_behind
-close by
-left135"
-	"relationship_behind
-close by
-left135" -> objects_41
-	"relationship_right
-close by136" [label="right
-close by" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_50 -> "relationship_right
-close by136"
-	"relationship_right
-close by136" -> objects_2
-	relationship_behind137 [label=behind fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_50 -> relationship_behind137
-	relationship_behind137 -> objects_12
-	relationship_right138 [label=right fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_50 -> relationship_right138
-	relationship_right138 -> objects_13
-	"relationship_right
-close by
-front
-lower than
-same object type139" [label="right
-close by
-front
-lower than
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_57 -> "relationship_right
-close by
-front
-lower than
-same object type139"
-	"relationship_right
-close by
-front
-lower than
-same object type139" -> objects_58
-	relationship_right140 [label=right fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_57 -> relationship_right140
-	relationship_right140 -> objects_60
-	"relationship_right
-smaller than
-same object type141" [label="right
-smaller than
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_57 -> "relationship_right
-smaller than
-same object type141"
-	"relationship_right
-smaller than
-same object type141" -> objects_61
-	"relationship_right
-smaller than
-same object type142" [label="right
-smaller than
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_57 -> "relationship_right
-smaller than
-same object type142"
-	"relationship_right
-smaller than
-same object type142" -> objects_62
-	"relationship_behind
-close by
-left
-higher than
-same object type143" [label="behind
-close by
-left
-higher than
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_58 -> "relationship_behind
-close by
-left
-higher than
-same object type143"
-	"relationship_behind
-close by
-left
-higher than
-same object type143" -> objects_57
-	"relationship_right
-behind144" [label="right
-behind" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_58 -> "relationship_right
-behind144"
-	"relationship_right
-behind144" -> objects_60
-	"relationship_right
-close by
-same as
-same object type145" [label="right
-close by
-same as
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_58 -> "relationship_right
-close by
-same as
-same object type145"
-	"relationship_right
-close by
-same as
-same object type145" -> objects_61
-	"relationship_right
-behind
-same object type146" [label="right
-behind
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_58 -> "relationship_right
-behind
-same object type146"
-	"relationship_right
-behind
-same object type146" -> objects_62
-	relationship_left147 [label=left fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_60 -> relationship_left147
-	relationship_left147 -> objects_57
-	"relationship_front
-left148" [label="front
-left" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_60 -> "relationship_front
-left148"
-	"relationship_front
-left148" -> objects_58
-	relationship_left149 [label=left fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_60 -> relationship_left149
-	relationship_left149 -> objects_61
-	"relationship_front
-close by
-left150" [label="front
-close by
-left" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_60 -> "relationship_front
-close by
-left150"
-	"relationship_front
-close by
-left150" -> objects_62
-	"relationship_left
-bigger than
-same object type151" [label="left
-bigger than
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_61 -> "relationship_left
-bigger than
-same object type151"
-	"relationship_left
-bigger than
-same object type151" -> objects_57
-	"relationship_close by
-left
-same as
-same object type152" [label="close by
-left
-same as
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_61 -> "relationship_close by
-left
-same as
-same object type152"
-	"relationship_close by
-left
-same as
-same object type152" -> objects_58
-	relationship_right153 [label=right fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_61 -> relationship_right153
-	relationship_right153 -> objects_60
-	"relationship_right
-close by
-higher than
-same object type154" [label="right
-close by
-higher than
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_61 -> "relationship_right
-close by
-higher than
-same object type154"
-	"relationship_right
-close by
-higher than
-same object type154" -> objects_62
-	"relationship_left
-bigger than
-same object type155" [label="left
-bigger than
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_62 -> "relationship_left
-bigger than
-same object type155"
-	"relationship_left
-bigger than
-same object type155" -> objects_57
-	"relationship_front
-left
-same object type156" [label="front
-left
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_62 -> "relationship_front
-left
-same object type156"
-	"relationship_front
-left
-same object type156" -> objects_58
-	"relationship_right
-close by
-behind157" [label="right
-close by
-behind" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_62 -> "relationship_right
-close by
-behind157"
-	"relationship_right
-close by
-behind157" -> objects_60
-	"relationship_close by
-left
-lower than
-same object type158" [label="close by
-left
-lower than
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_62 -> "relationship_close by
-left
-lower than
-same object type158"
-	"relationship_close by
-left
-lower than
-same object type158" -> objects_61
-	"relationship_higher than
-same object type159" [label="higher than
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_5 -> "relationship_higher than
-same object type159"
-	"relationship_higher than
-same object type159" -> objects_15
-	"relationship_lower than
-same object type160" [label="lower than
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_15 -> "relationship_lower than
-same object type160"
-	"relationship_lower than
-same object type160" -> objects_5
-	"relationship_lower than
-same object type161" [label="lower than
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_57 -> "relationship_lower than
-same object type161"
-	"relationship_lower than
-same object type161" -> objects_59
-	"relationship_higher than
-same object type162" [label="higher than
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_59 -> "relationship_higher than
-same object type162"
-	"relationship_higher than
-same object type162" -> objects_57
-	"relationship_smaller than
-same object type163" [label="smaller than
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_59 -> "relationship_smaller than
-same object type163"
-	"relationship_smaller than
-same object type163" -> objects_61
-	"relationship_bigger than
-same object type164" [label="bigger than
-same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_61 -> "relationship_bigger than
-same object type164"
-	"relationship_bigger than
-same object type164" -> objects_59
-	"relationship_same object type165" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_4 -> "relationship_same object type165"
-	"relationship_same object type165" -> objects_11
-	"relationship_more comfortable than166" [label="more comfortable than" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_2 -> "relationship_more comfortable than166"
-	"relationship_more comfortable than166" -> objects_35
+	"relationship_same shape
+same state
+same object type131" -> objects_100
+	"relationship_same color132" [label="same color" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_2 -> "relationship_same color132"
+	"relationship_same color132" -> objects_28
+	"relationship_same object type133" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_5 -> "relationship_same object type133"
+	"relationship_same object type133" -> objects_13
+	"relationship_same color
+same shape134" [label="same color
+same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_2 -> "relationship_same color
+same shape134"
+	"relationship_same color
+same shape134" -> objects_26
+	"relationship_same shape135" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_24 -> "relationship_same shape135"
+	"relationship_same shape135" -> objects_1
+	"relationship_darker than136" [label="darker than" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_24 -> "relationship_darker than136"
+	"relationship_darker than136" -> objects_15
+	"relationship_brighter than137" [label="brighter than" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_15 -> "relationship_brighter than137"
+	"relationship_brighter than137" -> objects_24
+	"relationship_same shape138" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_33 -> "relationship_same shape138"
+	"relationship_same shape138" -> objects_15
+	"relationship_darker than139" [label="darker than" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_24 -> "relationship_darker than139"
+	"relationship_darker than139" -> objects_28
+	"relationship_same object type140" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_18 -> "relationship_same object type140"
+	"relationship_same object type140" -> objects_17
+	"relationship_same object type141" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_17 -> "relationship_same object type141"
+	"relationship_same object type141" -> objects_18
+	"relationship_same shape142" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_19 -> "relationship_same shape142"
+	"relationship_same shape142" -> objects_15
+	"relationship_same shape
+same color143" [label="same shape
+same color" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_28 -> "relationship_same shape
+same color143"
+	"relationship_same shape
+same color143" -> objects_15
+	"relationship_brighter than144" [label="brighter than" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_28 -> "relationship_brighter than144"
+	"relationship_brighter than144" -> objects_24
+	"relationship_same object type145" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_8 -> "relationship_same object type145"
+	"relationship_same object type145" -> objects_27
+	"relationship_same shape146" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_1 -> "relationship_same shape146"
+	"relationship_same shape146" -> objects_14
+	"relationship_same shape147" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_26 -> "relationship_same shape147"
+	"relationship_same shape147" -> objects_1
+	"relationship_same object type
+same shape
+same color148" [label="same object type
+same shape
+same color" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_2 -> "relationship_same object type
+same shape
+same color148"
+	"relationship_same object type
+same shape
+same color148" -> objects_3
+	"relationship_same object type149" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_13 -> "relationship_same object type149"
+	"relationship_same object type149" -> objects_27
+	"relationship_same shape150" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_11 -> "relationship_same shape150"
+	"relationship_same shape150" -> objects_19
+	"relationship_same shape151" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_3 -> "relationship_same shape151"
+	"relationship_same shape151" -> objects_4
+	"relationship_same shape152" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_19 -> "relationship_same shape152"
+	"relationship_same shape152" -> objects_100
+	"relationship_same color
+same shape153" [label="same color
+same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_3 -> "relationship_same color
+same shape153"
+	"relationship_same color
+same shape153" -> objects_26
+	"relationship_same color154" [label="same color" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_28 -> "relationship_same color154"
+	"relationship_same color154" -> objects_14
+	"relationship_same object type155" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_9 -> "relationship_same object type155"
+	"relationship_same object type155" -> objects_10
+	"relationship_same object type156" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_10 -> "relationship_same object type156"
+	"relationship_same object type156" -> objects_12
+	"relationship_same shape157" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_33 -> "relationship_same shape157"
+	"relationship_same shape157" -> objects_19
+	"relationship_same shape158" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_4 -> "relationship_same shape158"
+	"relationship_same shape158" -> objects_1
+	"relationship_same state159" [label="same state" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_29 -> "relationship_same state159"
+	"relationship_same state159" -> objects_24
+	"relationship_same color160" [label="same color" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_14 -> "relationship_same color160"
+	"relationship_same color160" -> objects_15
+	"relationship_same object type161" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_23 -> "relationship_same object type161"
+	"relationship_same object type161" -> objects_20
+	"relationship_same shape162" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_1 -> "relationship_same shape162"
+	"relationship_same shape162" -> objects_2
+	"relationship_same color163" [label="same color" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_3 -> "relationship_same color163"
+	"relationship_same color163" -> objects_28
+	"relationship_same object type164" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_5 -> "relationship_same object type164"
+	"relationship_same object type164" -> objects_27
+	"relationship_same shape165" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_11 -> "relationship_same shape165"
+	"relationship_same shape165" -> objects_15
+	"relationship_same object type166" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_6 -> "relationship_same object type166"
+	"relationship_same object type166" -> objects_27
 	"relationship_same shape167" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_1 -> "relationship_same shape167"
-	"relationship_same shape167" -> objects_43
-	"relationship_same object type168" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_36 -> "relationship_same object type168"
-	"relationship_same object type168" -> objects_19
-	"relationship_same object type169" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_17 -> "relationship_same object type169"
-	"relationship_same object type169" -> objects_36
+	objects_100 -> "relationship_same shape167"
+	"relationship_same shape167" -> objects_19
+	"relationship_same color168" [label="same color" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_15 -> "relationship_same color168"
+	"relationship_same color168" -> objects_26
+	"relationship_same shape169" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_19 -> "relationship_same shape169"
+	"relationship_same shape169" -> objects_11
 	"relationship_same object type170" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_36 -> "relationship_same object type170"
-	"relationship_same object type170" -> objects_20
-	"relationship_more comfortable than171" [label="more comfortable than" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_2 -> "relationship_more comfortable than171"
-	"relationship_more comfortable than171" -> objects_31
-	"relationship_more comfortable than172" [label="more comfortable than" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_2 -> "relationship_more comfortable than172"
-	"relationship_more comfortable than172" -> objects_32
+	objects_20 -> "relationship_same object type170"
+	"relationship_same object type170" -> objects_21
+	"relationship_same color171" [label="same color" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_28 -> "relationship_same color171"
+	"relationship_same color171" -> objects_3
+	"relationship_same color172" [label="same color" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_15 -> "relationship_same color172"
+	"relationship_same color172" -> objects_14
 	"relationship_same object type173" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_17 -> "relationship_same object type173"
-	"relationship_same object type173" -> objects_16
+	objects_21 -> "relationship_same object type173"
+	"relationship_same object type173" -> objects_23
 	"relationship_same object type174" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_20 -> "relationship_same object type174"
-	"relationship_same object type174" -> objects_17
+	objects_12 -> "relationship_same object type174"
+	"relationship_same object type174" -> objects_10
 	"relationship_same object type175" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_16 -> "relationship_same object type175"
-	"relationship_same object type175" -> objects_36
-	"relationship_same object type176" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_36 -> "relationship_same object type176"
-	"relationship_same object type176" -> objects_18
-	"relationship_same object type177" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_36 -> "relationship_same object type177"
-	"relationship_same object type177" -> objects_17
-	"relationship_same object type178" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_17 -> "relationship_same object type178"
-	"relationship_same object type178" -> objects_20
-	"relationship_same object type179" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_18 -> "relationship_same object type179"
-	"relationship_same object type179" -> objects_17
-	"relationship_same object type180" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_19 -> "relationship_same object type180"
-	"relationship_same object type180" -> objects_36
+	objects_7 -> "relationship_same object type175"
+	"relationship_same object type175" -> objects_27
+	"relationship_same color176" [label="same color" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_26 -> "relationship_same color176"
+	"relationship_same color176" -> objects_28
+	"relationship_same state177" [label="same state" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_24 -> "relationship_same state177"
+	"relationship_same state177" -> objects_29
+	"relationship_same shape
+brighter than178" [label="same shape
+brighter than" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_2 -> "relationship_same shape
+brighter than178"
+	"relationship_same shape
+brighter than178" -> objects_24
+	"relationship_same shape179" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_15 -> "relationship_same shape179"
+	"relationship_same shape179" -> objects_11
+	"relationship_same color180" [label="same color" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_26 -> "relationship_same color180"
+	"relationship_same color180" -> objects_15
 	"relationship_same object type181" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_19 -> "relationship_same object type181"
-	"relationship_same object type181" -> objects_17
+	objects_12 -> "relationship_same object type181"
+	"relationship_same object type181" -> objects_9
 	"relationship_same object type182" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_59 -> "relationship_same object type182"
-	"relationship_same object type182" -> objects_62
-	"relationship_same object type183" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_36 -> "relationship_same object type183"
-	"relationship_same object type183" -> objects_16
-	"relationship_same shape184" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_43 -> "relationship_same shape184"
-	"relationship_same shape184" -> objects_1
+	objects_21 -> "relationship_same object type182"
+	"relationship_same object type182" -> objects_20
+	"relationship_same state183" [label="same state" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_24 -> "relationship_same state183"
+	"relationship_same state183" -> objects_30
+	"relationship_messier than184" [label="messier than" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_1 -> "relationship_messier than184"
+	"relationship_messier than184" -> objects_19
 	"relationship_same object type185" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_59 -> "relationship_same object type185"
-	"relationship_same object type185" -> objects_58
-	"relationship_same object type186" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_38 -> "relationship_same object type186"
-	"relationship_same object type186" -> objects_14
-	"relationship_same object type187" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_62 -> "relationship_same object type187"
-	"relationship_same object type187" -> objects_59
-	"relationship_same object type188" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_38 -> "relationship_same object type188"
-	"relationship_same object type188" -> objects_37
-	"relationship_same object type189" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_20 -> "relationship_same object type189"
-	"relationship_same object type189" -> objects_36
-	"relationship_same object type190" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_37 -> "relationship_same object type190"
-	"relationship_same object type190" -> objects_38
-	"relationship_same object type191" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_16 -> "relationship_same object type191"
-	"relationship_same object type191" -> objects_17
-	"relationship_same object type192" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_17 -> "relationship_same object type192"
-	"relationship_same object type192" -> objects_19
-	"relationship_same object type193" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_14 -> "relationship_same object type193"
-	"relationship_same object type193" -> objects_38
-	"relationship_brighter than194" [label="brighter than" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_27 -> "relationship_brighter than194"
-	"relationship_brighter than194" -> objects_43
-	"relationship_same object type195" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_18 -> "relationship_same object type195"
-	"relationship_same object type195" -> objects_36
-	"relationship_same object type196" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_11 -> "relationship_same object type196"
-	"relationship_same object type196" -> objects_4
-	"relationship_same object type197" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_17 -> "relationship_same object type197"
-	"relationship_same object type197" -> objects_18
-	"relationship_darker than198" [label="darker than" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_43 -> "relationship_darker than198"
-	"relationship_darker than198" -> objects_27
-	"relationship_same object type199" [label="same object type" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
-	objects_58 -> "relationship_same object type199"
-	"relationship_same object type199" -> objects_59
+	objects_27 -> "relationship_same object type185"
+	"relationship_same object type185" -> objects_6
+	"relationship_same shape186" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_19 -> "relationship_same shape186"
+	"relationship_same shape186" -> objects_33
+	"relationship_same shape187" [label="same shape" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_28 -> "relationship_same shape187"
+	"relationship_same shape187" -> objects_19
+	"relationship_same state188" [label="same state" fillcolor="#70bf40" fontcolor=black height=0 margin="0.11, 0.0001" shape=box style="filled,rounded" width=0.11]
+	objects_30 -> "relationship_same state188"
+	"relationship_same state188" -> objects_24
 }

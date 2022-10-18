@@ -1,4 +1,4 @@
-import networkx as nx
+#import networkx as nx
 import graphviz
 import json
 import argparse
@@ -36,8 +36,14 @@ with open(args.rel_path) as f:
     relationships = json.load(f)
 print("Finish!")
 
+scan_id = "4acaebcc-6c10-2a2a-858b-29c7e4fb410d"
 
-scan_id = objects["scans"][scene_num]["scan"]
+for objects_num in range(len(objects["scans"])):
+    if objects["scans"][objects_num]["scan"] == scan_id:
+        scan_obj_num = objects_num
+        break
+
+
 for relationship_num in range(len(relationships["scans"])):
     if relationships["scans"][relationship_num]["scan"] == scan_id:
         scan_rel_num = relationship_num
@@ -45,8 +51,8 @@ for relationship_num in range(len(relationships["scans"])):
 
 print(scan_id)
 
+
 #networkx setup
-G = nx.Graph()
 dg = graphviz.Digraph()
 tomato_rgb = [236,93,87]
 blue_rgb = [81,167,250]
@@ -56,8 +62,8 @@ tomato_hex = webcolors.rgb_to_hex(tomato_rgb)
 blue_hex = webcolors.rgb_to_hex(blue_rgb)
 
 #import object node
-for object_num in range(len(objects["scans"][scene_num]["objects"])):
-    object = objects["scans"][scene_num]["objects"][object_num]
+for object_num in range(len(objects["scans"][scan_obj_num]["objects"])):
+    object = objects["scans"][scan_obj_num]["objects"][object_num]
 
     #object class
     dg.node(("objects_" + str(object["id"])), shape='box', style='filled,rounded',
@@ -97,4 +103,5 @@ for index, object in enumerate(sorted_relationship.keys()):
     dg.edge(("objects_" + str(object[0])), ("relationship_" + node_name + str(index)))
     dg.edge(("relationship_" + node_name + str(index)), ("objects_" + str(object[1])))
 
+print("a")
 dg.render("/home/dongmin/Scene-Graph-Dataset-Generator/results/test", view=True)
