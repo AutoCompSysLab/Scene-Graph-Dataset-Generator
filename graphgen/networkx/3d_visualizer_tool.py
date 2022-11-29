@@ -1,5 +1,6 @@
 import os
 import json
+import random
 
 import networkx as nx
 import matplotlib.pyplot as plt
@@ -183,7 +184,11 @@ def make_position
 input : None
 output : list (ex. [10, 21, 7])
 """
-
+def make_random_position(rand_range:int) -> dict:
+    pos = {}
+    # 0~rand_range 사이 random float list (ex - [24.14, 27.25, 2.54])
+    pos["position"] = [round(random.random() * rand_range ,2) for val in range(0,3)]
+    return pos
 
 def visualizer_3d():
     # load class, relationships class
