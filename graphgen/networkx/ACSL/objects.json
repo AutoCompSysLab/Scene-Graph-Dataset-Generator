@@ -1,0 +1,77 @@
+{
+  "scans": [
+    {
+      "scan": "0988ea72-eb32-2e61-8344-99e2283c2728",
+      "objects": [
+        {
+          "ply_color": "#aec7e8",
+          "nyu40": "2",
+          "eigen13": "5",
+          "label": "floor",
+          "rio27": "2",
+          "affordances": [
+            "placing items on",
+            "walking on"
+          ],
+          "id": "1",
+          "global_id": "188",
+          "attributes": {
+            "state": [
+              "clean"
+            ],
+            "shape": [
+              "flat"
+            ],
+            "lexical": [
+              "inside",
+              "lower",
+              "horizontal"
+            ],
+            "color": [
+              "beige"
+            ]
+          }
+        },
+        {
+          "ply_color": "#a473a0",
+          "nyu40": "40",
+          "eigen13": "7",
+          "label": "soap dish",
+          "rio27": "0",
+          "affordances": [
+            "placing items on"
+          ],
+          "id": "450",
+          "global_id": "420",
+          "attributes": {}
+        },
+        {
+          "ply_color": "#ffbb78",
+          "nyu40": "8",
+          "eigen13": "0",
+          "state_affordances": [
+            "opening (closed)"
+          ],
+          "label": "door",
+          "rio27": "8",
+          "affordances": [
+            "slamming"
+          ],
+          "id": "3",
+          "global_id": "155",
+          "attributes": {
+            "color": [
+              "white"
+            ],
+            "shape": [
+              "flat"
+            ],
+            "state": [
+              "closed"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
