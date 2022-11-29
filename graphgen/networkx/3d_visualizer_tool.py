@@ -88,7 +88,52 @@ def make_edges_objs_label(objs, rels):
             obj_id_label[end_id] = end_label +"_"+str(end_id)
             
     return edge_dict, obj_id_label
-        
+
+"""
+objects.json
+"scans": [
+    {
+      "scan": "0988ea72-eb32-2e61-8344-99e2283c2728",
+      "objects": [
+        {
+          "ply_color": "#aec7e8",
+          "nyu40": "2",
+          "eigen13": "5",
+          "label": "floor",
+          "rio27": "2",
+          "affordances": [
+            "placing items on",
+            "walking on"
+          ],
+          "id": "1",
+          # TODO : add position into json
+          // float 가능
+          "position" : [10.7, 21.8, 7],
+          //
+          "global_id": "188",
+          "attributes": {
+            "state": [
+              "clean"
+            ],
+            "shape": [
+              "flat"
+            ],
+            "lexical": [
+              "inside",
+              "lower",
+              "horizontal"
+            ],
+            "color": [
+              "beige"
+            ]
+          }
+        },
+      ]
+    }
+  ]
+
+"""
+
 def draw_graph(objs, edge_dict: dict, obj_id_label: dict):
     # network X
     graph = nx.DiGraph()
@@ -132,6 +177,13 @@ def make_position(obj_lists:list) -> dict:
         pos[obj[0]]=pos_lst
     return pos
 
+# TODO : random position
+"""
+def make_position
+input : None
+output : list (ex. [10, 21, 7])
+"""
+
 
 def visualizer_3d():
     # load class, relationships class
@@ -146,7 +198,7 @@ def visualizer_3d():
         scan = rel_scan.get("scan")
         # TEST
         # TODO : Delete this when it will be deployed
-        if scan != "6bde60c6-9162-246f-8d25-4df09330450c":
+        if scan != "0988ea72-eb32-2e61-8344-99e2283c2728":
             continue
         # Check when the scan code of obj_scans same with it of rel_scans
         objs = find_scan(scan, obj_scans)
