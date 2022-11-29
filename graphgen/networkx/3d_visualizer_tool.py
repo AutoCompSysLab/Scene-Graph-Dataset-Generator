@@ -45,18 +45,20 @@ Sample is in above link.
 def load_data(obj_file_name, rel_file_name) -> tuple:
     with open(os.path.join(BASE_DIR, "3DSSG", obj_file_name), "r") as obj_file:
         obj_scans = json.load(obj_file).get("scans")
+        # obj_scans : scan list
     with open(os.path.join(BASE_DIR, "3DSSG", rel_file_name), "r") as rel_file:
         rel_scans = json.load(rel_file).get("scans")
+        # rel_scans : scan list
     
     return (obj_scans, rel_scans)
 
-def find_scan(scan, obj_scans):
+def find_objects_by_scan(scan_id, obj_scans) -> list:
     for obj_scan in obj_scans:
-        if obj_scan.get("scan") == scan:
+        if obj_scan.get("scan") == scan_id:
             return obj_scan.get("objects")
     return None
     
-def find_obj(objs, obj_id):
+def find_obj(objs, obj_id) -> dict:
     for obj in objs:
         if obj_id == int(obj["id"]):
             return obj
@@ -134,6 +136,12 @@ objects.json
   ]
 
 """
+# TODO
+# def 포지션 가져오기()
+"""
+input : obj_lists
+output : obj_lists (with position attribute)
+"""
 
 def draw_graph(objs, edge_dict: dict, obj_id_label: dict):
     # network X
@@ -184,11 +192,6 @@ def make_position
 input : None
 output : list (ex. [10, 21, 7])
 """
-def make_random_position(rand_range:int) -> dict:
-    pos = {}
-    # 0~rand_range 사이 random float list (ex - [24.14, 27.25, 2.54])
-    pos["position"] = [round(random.random() * rand_range ,2) for val in range(0,3)]
-    return pos
 
 def visualizer_3d():
     # load class, relationships class
@@ -206,7 +209,7 @@ def visualizer_3d():
         if scan != "0988ea72-eb32-2e61-8344-99e2283c2728":
             continue
         # Check when the scan code of obj_scans same with it of rel_scans
-        objs = find_scan(scan, obj_scans)
+        objs = find_objects_by_scan(scan, obj_scans)
         # Make edges & label by obj_id 
         edge_dict, obj_id_label = make_edges_objs_label(objs, rels)
         # Draw Graph
