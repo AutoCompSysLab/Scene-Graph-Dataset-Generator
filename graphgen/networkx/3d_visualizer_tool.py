@@ -3,6 +3,7 @@ import json
 
 import networkx as nx
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 
 # Load Classes
 # https://github.com/3DSSG/3DSSG.github.io/blob/master/README.md 
@@ -81,10 +82,10 @@ def make_edges_objs_label(objs, rels):
         # update obj_id_label dict
         if start_id not in obj_id_label.keys():
             start_label = find_obj(objs, start_id).get("label")
-            obj_id_label[start_id] = start_label
+            obj_id_label[start_id] = start_label + "_" + str(start_id)
         if end_id not in obj_id_label.keys():
             end_label = find_obj(objs, end_id).get("label")
-            obj_id_label[end_id] = end_label
+            obj_id_label[end_id] = end_label +"_"+str(end_id)
             
     return edge_dict, obj_id_label
         
@@ -93,6 +94,7 @@ def draw_graph(objs, edge_dict: dict, obj_id_label: dict):
     graph = nx.DiGraph()
     obj_labels = list(obj_id_label.values())
     # obj node 추가
+    # TODO : 여기서 이름이 같으면 add_nodes_from에서 하나로 보여져요...
     graph.add_nodes_from(obj_labels)
     print(graph.nodes)
     # 각 node들의 위치를 생성하는 함수
@@ -110,11 +112,14 @@ def draw_graph(objs, edge_dict: dict, obj_id_label: dict):
         
     labels = nx.get_edge_attributes(graph, "name")
 
-    nx.draw(graph, pos, with_labels=True, connectionstyle='arc3, rad = 0.1')
+    nx.draw(graph, pos, with_labels=True)
     nx.draw_networkx_edge_labels(graph, pos, edge_labels=labels, verticalalignment='top')
+    
     plt.show()
     
-def make_position(labels:list):
+    
+    
+def make_position(labels:list) -> dict:
     pos = {}
     for i in range(len(labels)):
         if i%2 == 0:
