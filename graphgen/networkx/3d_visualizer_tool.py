@@ -92,13 +92,16 @@ def make_edges_objs_label(objs, rels):
 def draw_graph(objs, edge_dict: dict, obj_id_label: dict):
     # network X
     graph = nx.DiGraph()
-    obj_labels = list(obj_id_label.values())
+    obj_lists = [(val, {'id':key}) for key, val in obj_id_label.items()]
+    # obj_labels = list(obj_id_label.values())
     # obj node 추가
     # TODO : 여기서 이름이 같으면 add_nodes_from에서 하나로 보여져요...
     graph.add_nodes_from(obj_labels)
+
     print(graph.nodes)
     # 각 node들의 위치를 생성하는 함수
-    pos = make_position(list(obj_id_label.values()))
+    pos = make_position(obj_lists)
+    # pos = make_position(list(obj_id_label.values()))
     
     # edge label 추가
     """
@@ -117,16 +120,16 @@ def draw_graph(objs, edge_dict: dict, obj_id_label: dict):
     
     plt.show()
     
-    
-    
-def make_position(labels:list) -> dict:
+
+def make_position(obj_lists:list) -> dict:
     pos = {}
-    for i in range(len(labels)):
-        if i%2 == 0:
-            pos_lst = [i, len(labels) - i]
+    for obj in obj_lists:
+        if obj[1]['id'] % 2 == 0:
+            pos_lst = [len(obj_lists) - obj[1]['id'],len(obj_lists) - obj[1]['id']]
         else:
-            pos_lst = [i, i]
-        pos[labels[i]]=pos_lst
+            pos_lst = [obj[1]['id'], obj[1]['id']]
+    
+        pos[obj[0]]=pos_lst
     return pos
 
 
@@ -166,3 +169,6 @@ def visualizer_3d():
         break
 
 visualizer_3d()
+
+# if __name__ == '__main__':
+#     visualizer_3d()
