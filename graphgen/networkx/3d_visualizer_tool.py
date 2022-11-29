@@ -96,7 +96,7 @@ def draw_graph(objs, edge_dict: dict, obj_id_label: dict):
     # obj_labels = list(obj_id_label.values())
     # obj node 추가
     # TODO : 여기서 이름이 같으면 add_nodes_from에서 하나로 보여져요...
-    graph.add_nodes_from(obj_labels)
+    graph.add_nodes_from(obj_lists)
 
     print(graph.nodes)
     # 각 node들의 위치를 생성하는 함수
@@ -125,7 +125,7 @@ def make_position(obj_lists:list) -> dict:
     pos = {}
     for obj in obj_lists:
         if obj[1]['id'] % 2 == 0:
-            pos_lst = [len(obj_lists) - obj[1]['id'],len(obj_lists) - obj[1]['id']]
+            pos_lst = [obj[1]['id'], len(obj_lists) - obj[1]['id']]
         else:
             pos_lst = [obj[1]['id'], obj[1]['id']]
     
