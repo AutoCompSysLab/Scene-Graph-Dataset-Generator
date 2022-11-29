@@ -1,5 +1,6 @@
 import os
 import json
+import pprint
 import random
 
 import networkx as nx
@@ -43,7 +44,7 @@ Sample is in above link.
 """
 
 def load_data(obj_file_name, rel_file_name) -> tuple:
-    with open(os.path.join(BASE_DIR, "3DSSG", obj_file_name), "r") as obj_file:
+    with open(os.path.join(BASE_DIR, "ACSL", obj_file_name), "r") as obj_file:
         obj_scans = json.load(obj_file).get("scans")
         # obj_scans : scan list
     with open(os.path.join(BASE_DIR, "3DSSG", rel_file_name), "r") as rel_file:
@@ -67,7 +68,7 @@ def find_obj(objs, obj_id) -> dict:
 def make_edges_objs_label(objs, rels):
     edge_dict = {}
     # To save label by obj_id
-    obj_id_label = {}
+    obj_dict = {}
     for relation in rels:
         start_id = relation[0]
         end_id = relation[1]
@@ -83,14 +84,17 @@ def make_edges_objs_label(objs, rels):
             edge_dict[edge] = relation_label + ", "
         
         # update obj_id_label dict
-        if start_id not in obj_id_label.keys():
-            start_label = find_obj(objs, start_id).get("label")
-            obj_id_label[start_id] = start_label + "_" + str(start_id)
-        if end_id not in obj_id_label.keys():
-            end_label = find_obj(objs, end_id).get("label")
-            obj_id_label[end_id] = end_label +"_"+str(end_id)
+        if start_id not in obj_dict.keys():
+            start_obj = find_obj(objs, start_id)
+            start_label = start_obj.get("label")
+            print(start_obj)
+            obj_dict[start_id] = start_label + "_" + str(start_id)
+        if end_id not in obj_dict.keys():
+            end_obj = find_obj(objs, end_id)
+            end_label = end_obj.get("label")
+            obj_dict[end_id] = end_label +"_"+str(end_id)
             
-    return edge_dict, obj_id_label
+    return edge_dict, obj_dict
 
 """
 objects.json
@@ -198,7 +202,7 @@ def visualizer_3d():
     c_lines, r_lines = load_classes("classes.txt", "relationships.txt")
     
     # load object, relationships instances data
-    obj_scans, rel_scans = load_data("objects.json", "relationships.json")
+    obj_scans, rel_scans = load_data("objects_sample.json", "relationships.json")
 
     # search all relations by scan
     for rel_scan in rel_scans:
@@ -211,7 +215,8 @@ def visualizer_3d():
         # Check when the scan code of obj_scans same with it of rel_scans
         objs = find_objects_by_scan(scan, obj_scans)
         # Make edges & label by obj_id 
-        edge_dict, obj_id_label = make_edges_objs_label(objs, rels)
+        edge_dict, obj_dict = make_edges_objs_label(objs, rels)
+        # print(obj_dict)
         # Draw Graph
         """
         objs = [object instances(dict)]
@@ -225,7 +230,7 @@ def visualizer_3d():
             ...
         }
         """
-        draw_graph(objs, edge_dict, obj_id_label)
+        # draw_graph(objs, edge_dict, obj_id_label)
         break
 
 visualizer_3d()
