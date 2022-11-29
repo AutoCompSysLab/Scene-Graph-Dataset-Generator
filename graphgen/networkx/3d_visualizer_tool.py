@@ -1,5 +1,6 @@
 import os
 import json
+import pprint
 import random
 
 import networkx as nx
@@ -70,6 +71,7 @@ def make_edges_objs(objs, rels):
     # To save label by obj_id
     obj_dict = {}
     label_color = {}
+    
     for relation in rels:
         start_id = relation[0]
         end_id = relation[1]
