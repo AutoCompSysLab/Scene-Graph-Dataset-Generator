@@ -1,0 +1,16 @@
+{
+    "scans": [
+        {
+            "relationships": [
+                [
+                    8,  // object: instance id from 3RScans semseg.json and objects.json objects["id"]
+                    1,  // object: instance id from 3RScans semseg.json and objects.json objects["id"]
+                    15, // relationships id (from 3DSSG/relationships.txt)
+                    "standing on" // semantic relationship (from 3DSSG/relationships.txt)
+                ],
+                ...
+            ],
+            "scan": "f62fd5fd-9a3f-2f44-883a-1e5cf819608e"
+        }
+    ]
+}

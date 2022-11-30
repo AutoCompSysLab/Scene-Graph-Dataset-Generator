@@ -1,12 +1,13 @@
 import os
 import json
-import pprint
 import random
 
 import networkx as nx
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import text
 from mpl_toolkits.mplot3d import Axes3D
+
+import numpy as np
 
 # Load Classes
 # https://github.com/3DSSG/3DSSG.github.io/blob/master/README.md 
@@ -67,31 +68,38 @@ def find_obj(objs, obj_id) -> dict:
     return None
 
 def make_edges_objs(objs, rels):
-    edge_dict = {}
+    edge_set = set()
     # To save label by obj_id
     obj_dict = {}
+    rel_dict = {}
     label_color = {}
-    
-    for relation in rels:
+    for i in range(len(rels)):
+        relation = rels[i]
         start_id = relation[0]
         end_id = relation[1]
-        relation_id = relation[2]
-        relation_label = relation[3]
+        
+        start_obj = find_obj(objs, start_id)
+        start_label = start_obj.get("label").replace(" ", "\n")
+        start_name = start_label+"\n"+str(start_id)
+        start_position = start_obj.get("position")
+        
+        end_obj = find_obj(objs, end_id)
+        end_label = end_obj.get("label").replace(" ", "\n")
+        end_position = end_obj.get("position")
+        end_name = end_label +"\n"+str(end_id)
+        
+        relation_label = relation[3].replace(" ", "\n")
+        relation_position = np.sum([start_position, end_position], axis=0)/2
+        relation_name = relation_label + "\n" + str(i)
 
         # type(edge keys) = tuple
-        edge = (start_id, end_id)
-        # edge values = string (ex. stand on in front)
-        if edge in edge_dict.keys():
-            edge_dict[edge] += relation_label +", "
-        else:
-            edge_dict[edge] = relation_label + ", "
+        edge1 = (start_name, relation_name)
+        edge2 = (relation_name, end_name)
+        edge_set.add(edge1)
+        edge_set.add(edge2)
         
         # update obj_id_label dict
-        if start_id not in obj_dict.keys():
-            start_obj = find_obj(objs, start_id)
-            start_label = start_obj.get("label").replace(" ", "\n")
-            start_position = start_obj.get("position")
-            
+        if start_name not in obj_dict.keys():
             # coloring
             if start_label in label_color.keys():
                 color = label_color[start_label]
@@ -99,18 +107,14 @@ def make_edges_objs(objs, rels):
                 color = "#"+''.join([random.choice('789ABCDEF') for j in range(6)]) 
                 label_color[start_label] = color
             
-            obj_dict[start_id] = {
-                "name" :  start_label + "\n" + str(start_id),
+            obj_dict[start_name] = {
+                "name" :  start_name,
                 "label" : start_label,
                 "position" : start_position,
                 "color" : color
             }
             
-        if end_id not in obj_dict.keys():
-            end_obj = find_obj(objs, end_id)
-            end_label = end_obj.get("label").replace(" ", "\n")
-            end_position = end_obj.get("position")
-            
+        if end_name not in obj_dict.keys():
             # coloring
             if end_label in label_color.keys():
                 color = label_color[end_label]
@@ -118,14 +122,29 @@ def make_edges_objs(objs, rels):
                 color = "#"+''.join([random.choice('789ABCDEF') for j in range(6)])
                 label_color[end_label] = color
             
-            obj_dict[end_id] = {
-                "name" : end_label +"\n"+str(end_id),
+            obj_dict[end_name] = {
+                "name" : end_name,
                 "label" : end_label,
                 "position" : end_position,
                 "color" : color
             }
+        
+        if relation_name not in rel_dict.keys():
+            # coloring
+            if relation_label in label_color.keys():
+                color = label_color[relation_label]
+            else:
+                color = "#"+''.join([random.choice('0123') for j in range(6)])
+                label_color[relation_label] = color
             
-    return obj_dict, edge_dict, label_color
+            rel_dict[relation_name] = {
+                "name" : relation_name,
+                "label" : relation_label,
+                "position" : relation_position,
+                "color" : color
+            }
+            
+    return obj_dict, rel_dict, edge_set, label_color
 
 def make_position_color(node_lst:list) -> tuple:
     pos = {}
@@ -133,45 +152,66 @@ def make_position_color(node_lst:list) -> tuple:
         pos[node[0]] = node[1]["position"][0:2]
     color = list(map(lambda node: node[1]["color"], node_lst))
     return pos, color
+    
 
-def draw_graph(objs, edge_dict: dict, obj_dict: dict):
+def draw_graph(objs, edge_set: set, obj_dict: dict, rel_dict: dict):
     # network X
     graph = nx.DiGraph()
     node_lst = []
-    for id in obj_dict:
-        obj = obj_dict[id]
+    for key in obj_dict:
+        obj = obj_dict[key]
         node = (
-            obj.get("name"),
+            key,
             {
-                "id": id,
+                "name": key,
                 "label": obj.get("label"),
                 "position": obj.get("position"),
                 "color": obj.get("color") 
             }
         )
         node_lst.append(node)
+    rel_node_lst = []
+    for key in rel_dict:
+        rel = rel_dict[key]
+        node = (
+            key,
+            {
+                "name": key,
+                "label": rel.get("label"),
+                "position": rel.get("position"),
+                "color": rel.get("color") 
+            }
+        )
+        rel_node_lst.append(node)
     # obj node 추가
     graph.add_nodes_from(node_lst)
 
     # 각 node들의 위치를 생성하는 함수
-    pos, color = make_position_color(node_lst)
-    
+    pos_obj, color_obj = make_position_color(node_lst)
+    pos_rel, color_rel = make_position_color(rel_node_lst)
     # edge label 추가
+    pos = pos_obj.copy()
+    pos.update(pos_rel)
     """
     edge_dict = {
         (start_id, end_id): relations labels,
     }
     """
-    for edges in edge_dict:
-        graph.add_edge(obj_dict[edges[0]]["name"], obj_dict[edges[1]]["name"], name=edge_dict[edges][:-2])
-        
+    obj_dict_copy = obj_dict.copy()
+    obj_dict_copy.update(rel_dict)
+    
+    for edges in edge_set:
+        graph.add_edge(obj_dict_copy[edges[0]]["name"], obj_dict_copy[edges[1]]["name"])
+
     labels = nx.get_edge_attributes(graph, "name")
     """
     s : square, o: circle, ^: triangle, > : right triangle, v : bottom triangle, < : left triangle
     d : diamond, p : pentagon, h : hexagon, 8 : octagonal
     """
-    nx.draw(graph, pos, with_labels=False, node_size=700, node_shape='s', node_color=color, linewidths=5)
-    nx.draw_networkx_edge_labels(graph, pos, edge_labels=labels, alpha=0.5, label_pos=0.3, verticalalignment='top')
+    nx.draw(graph, pos, with_labels=False, nodelist=list(map(lambda node: node[0], node_lst)), node_size=700, node_shape='s', node_color=color_obj, linewidths=5)
+    nx.draw(graph, pos, with_labels=False, nodelist=list(map(lambda node: node[0], rel_node_lst)), node_size=100, node_shape='s', node_color=color_rel, linewidths=5)
+    # nx.draw_networkx_edge_labels(graph, pos, edge_labels=labels, alpha=0.5, label_pos=0.3, verticalalignment='top')
+    nx.draw_networkx_edges(graph, pos)
     for node, (x, y) in pos.items():
         text(x, y, node, fontsize=8, ha='center', va='center')
     plt.show()
@@ -194,9 +234,9 @@ def visualizer_3d():
         # Check when the scan code of obj_scans same with it of rel_scans
         objs = find_objects_by_scan(scan, obj_scans)
         # Make edges & label by obj_id 
-        obj_dict, edge_dict, label_color = make_edges_objs(objs, rels)
+        obj_dict, rel_dict, edge_set, label_color = make_edges_objs(objs, rels)
         # Draw Graph
-        draw_graph(objs, edge_dict, obj_dict)
+        draw_graph(objs, edge_set, obj_dict, rel_dict)
         break
 
 visualizer_3d()

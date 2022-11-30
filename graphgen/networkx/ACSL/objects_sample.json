@@ -1,0 +1,504 @@
+{
+    "scans": [
+        {
+            "scan": "0988ea72-eb32-2e61-8344-99e2283c2728",
+            "objects": [
+                {
+                    "label": "floor",
+                    "id": "1",
+                    "global_id": "188",
+                    "attributes": {
+                        "state": [
+                            "clean"
+                        ],
+                        "shape": [
+                            "flat"
+                        ],
+                        "color": [
+                            "beige"
+                        ]
+                    },
+                    "position": [
+                        27.27,
+                        35.66,
+                        5.79
+                    ]
+                },
+                {
+                    "label": "soap dish",
+                    "id": "450",
+                    "global_id": "420",
+                    "attributes": {},
+                    "position": [
+                        21.57,
+                        41.83,
+                        29.82
+                    ]
+                },
+                {
+                    "label": "door",
+                    "id": "3",
+                    "global_id": "155",
+                    "attributes": {
+                        "color": [
+                            "white"
+                        ],
+                        "shape": [
+                            "flat"
+                        ],
+                        "state": [
+                            "closed"
+                        ]
+                    },
+                    "position": [
+                        14.5,
+                        38.22,
+                        36.87
+                    ]
+                },
+                {
+                    "label": "trash can",
+                    "id": "4",
+                    "global_id": "482",
+                    "attributes": {},
+                    "position": [
+                        18.72,
+                        5.05,
+                        9.8
+                    ]
+                },
+                {
+                    "label": "trash can",
+                    "id": "5",
+                    "global_id": "482",
+                    "attributes": {},
+                    "position": [
+                        23.11,
+                        26.29,
+                        20.38
+                    ]
+                },
+                {
+                    "label": "fridge",
+                    "id": "6",
+                    "global_id": "202",
+                    "attributes": {},
+                    "position": [
+                        6.65,
+                        41.04,
+                        49.52
+                    ]
+                },
+                {
+                    "label": "object",
+                    "id": "7",
+                    "global_id": "298",
+                    "attributes": {},
+                    "position": [
+                        39.18,
+                        11.38,
+                        6.6
+                    ]
+                },
+                {
+                    "label": "stove",
+                    "id": "9",
+                    "global_id": "448",
+                    "attributes": {},
+                    "position": [
+                        42.37,
+                        0.59,
+                        49.45
+                    ]
+                },
+                {
+                    "label": "kitchen cabinet",
+                    "id": "11",
+                    "global_id": "251",
+                    "attributes": {
+                        "size": [
+                            "low"
+                        ]
+                    },
+                    "position": [
+                        12.91,
+                        49.61,
+                        15.75
+                    ]
+                },
+                {
+                    "label": "oven glove",
+                    "id": "12",
+                    "global_id": "305",
+                    "attributes": {},
+                    "position": [
+                        28.24,
+                        34.87,
+                        4.07
+                    ]
+                },
+                {
+                    "label": "wall",
+                    "id": "2",
+                    "global_id": "503",
+                    "attributes": {},
+                    "position": [
+                        24.44,
+                        5.54,
+                        32.34
+                    ]
+                },
+                {
+                    "label": "wall",
+                    "id": "15",
+                    "global_id": "503",
+                    "attributes": {},
+                    "position": [
+                        19.53,
+                        27.48,
+                        18.0
+                    ]
+                },
+                {
+                    "label": "ceiling",
+                    "id": "16",
+                    "global_id": "82",
+                    "attributes": {},
+                    "position": [
+                        2.1,
+                        0.75,
+                        50.0
+                    ]
+                },
+                {
+                    "label": "heater",
+                    "id": "17",
+                    "global_id": "228",
+                    "attributes": {
+                        "shape": [
+                            "rectangular"
+                        ],
+                        "color": [
+                            "white"
+                        ],
+                        "size": [
+                            "tall",
+                            "narrow"
+                        ]
+                    },
+                    "position": [
+                        17.79,
+                        17.0,
+                        31.45
+                    ]
+                },
+                {
+                    "label": "pipe",
+                    "id": "18",
+                    "global_id": "340",
+                    "attributes": {},
+                    "position": [
+                        36.55,
+                        21.92,
+                        38.12
+                    ]
+                },
+                {
+                    "label": "hood",
+                    "id": "19",
+                    "global_id": "230",
+                    "attributes": {},
+                    "position": [
+                        7.14,
+                        0.69,
+                        3.67
+                    ]
+                },
+                {
+                    "label": "kettle",
+                    "id": "20",
+                    "global_id": "243",
+                    "attributes": {},
+                    "position": [
+                        46.63,
+                        16.42,
+                        1.46
+                    ]
+                },
+                {
+                    "label": "toaster",
+                    "id": "21",
+                    "global_id": "468",
+                    "attributes": {},
+                    "position": [
+                        44.58,
+                        14.44,
+                        48.33
+                    ]
+                },
+                {
+                    "label": "radiator",
+                    "id": "23",
+                    "global_id": "360",
+                    "attributes": {},
+                    "position": [
+                        27.07,
+                        28.67,
+                        47.95
+                    ]
+                },
+                {
+                    "label": "curtain",
+                    "id": "24",
+                    "global_id": "129",
+                    "attributes": {},
+                    "position": [
+                        16.32,
+                        24.64,
+                        20.87
+                    ]
+                },
+                {
+                    "label": "wall",
+                    "id": "26",
+                    "global_id": "503",
+                    "attributes": {},
+                    "position": [
+                        0.53,
+                        41.38,
+                        28.71
+                    ]
+                },
+                {
+                    "label": "sponge",
+                    "id": "220",
+                    "global_id": "429",
+                    "attributes": {},
+                    "position": [
+                        24.06,
+                        46.38,
+                        6.87
+                    ]
+                },
+                {
+                    "label": "chair",
+                    "id": "31",
+                    "global_id": "85",
+                    "attributes": {
+                        "color": [
+                            "white"
+                        ]
+                    },
+                    "position": [
+                        22.84,
+                        35.2,
+                        45.9
+                    ]
+                },
+                {
+                    "label": "chair",
+                    "id": "32",
+                    "global_id": "85",
+                    "attributes": {},
+                    "position": [
+                        23.85,
+                        11.66,
+                        16.98
+                    ]
+                },
+                {
+                    "label": "chair",
+                    "id": "33",
+                    "global_id": "85",
+                    "attributes": {},
+                    "position": [
+                        32.79,
+                        38.29,
+                        20.23
+                    ]
+                },
+                {
+                    "label": "chair",
+                    "id": "34",
+                    "global_id": "85",
+                    "attributes": {},
+                    "position": [
+                        7.19,
+                        28.5,
+                        49.54
+                    ]
+                },
+                {
+                    "label": "dining table",
+                    "id": "35",
+                    "global_id": "144",
+                    "attributes": {},
+                    "position": [
+                        17.12,
+                        36.62,
+                        47.04
+                    ]
+                },
+                {
+                    "label": "table lamp",
+                    "id": "36",
+                    "global_id": "456",
+                    "attributes": {},
+                    "position": [
+                        35.15,
+                        31.65,
+                        8.69
+                    ]
+                },
+                {
+                    "label": "box",
+                    "id": "37",
+                    "global_id": "59",
+                    "attributes": {
+                        "size": [
+                            "tall"
+                        ]
+                    },
+                    "position": [
+                        26.26,
+                        41.29,
+                        34.91
+                    ]
+                },
+                {
+                    "label": "table lamp",
+                    "id": "38",
+                    "global_id": "456",
+                    "attributes": {},
+                    "position": [
+                        36.07,
+                        45.8,
+                        14.85
+                    ]
+                },
+                {
+                    "label": "rack",
+                    "id": "39",
+                    "global_id": "359",
+                    "attributes": {},
+                    "position": [
+                        46.56,
+                        5.38,
+                        34.64
+                    ]
+                },
+                {
+                    "label": "shoe",
+                    "id": "40",
+                    "global_id": "397",
+                    "attributes": {},
+                    "position": [
+                        33.27,
+                        1.7,
+                        40.64
+                    ]
+                },
+                {
+                    "label": "kitchen cabinet",
+                    "id": "28",
+                    "global_id": "251",
+                    "attributes": {
+                        "size": [
+                            "narrow"
+                        ]
+                    },
+                    "position": [
+                        22.33,
+                        30.62,
+                        4.49
+                    ]
+                },
+                {
+                    "label": "box",
+                    "id": "42",
+                    "global_id": "59",
+                    "attributes": {
+                        "size": [
+                            "tall"
+                        ]
+                    },
+                    "position": [
+                        43.52,
+                        9.03,
+                        32.97
+                    ]
+                },
+                {
+                    "label": "object",
+                    "id": "43",
+                    "global_id": "298",
+                    "attributes": {},
+                    "position": [
+                        41.63,
+                        12.44,
+                        2.5
+                    ]
+                },
+                {
+                    "label": "object",
+                    "id": "44",
+                    "global_id": "298",
+                    "attributes": {},
+                    "position": [
+                        20.3,
+                        14.86,
+                        35.44
+                    ]
+                },
+                {
+                    "label": "object",
+                    "id": "46",
+                    "global_id": "298",
+                    "attributes": {},
+                    "position": [
+                        43.9,
+                        37.17,
+                        40.84
+                    ]
+                },
+                {
+                    "label": "wall",
+                    "id": "47",
+                    "global_id": "503",
+                    "attributes": {},
+                    "position": [
+                        32.73,
+                        16.28,
+                        16.74
+                    ]
+                },
+                {
+                    "label": "object",
+                    "id": "48",
+                    "global_id": "298",
+                    "attributes": {},
+                    "position": [
+                        18.0,
+                        43.24,
+                        20.01
+                    ]
+                },
+                {
+                    "label": "sink",
+                    "id": "13",
+                    "global_id": "415",
+                    "attributes": {
+                        "size": [
+                            "wide"
+                        ]
+                    },
+                    "position": [
+                        30.39,
+                        38.46,
+                        13.81
+                    ]
+                }
+            ]
+        }
+    ]
+}
