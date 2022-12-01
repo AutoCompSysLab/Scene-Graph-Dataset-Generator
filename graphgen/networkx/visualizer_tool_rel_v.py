@@ -209,7 +209,7 @@ def draw_graph(objs, edge_set: set, obj_dict: dict, rel_dict: dict):
     d : diamond, p : pentagon, h : hexagon, 8 : octagonal
     """
     nx.draw(graph, pos, with_labels=False, nodelist=list(map(lambda node: node[0], node_lst)), node_size=700, node_shape='s', node_color=color_obj, linewidths=5)
-    nx.draw(graph, pos, with_labels=False, nodelist=list(map(lambda node: node[0], rel_node_lst)), node_size=100, node_shape='s', node_color=color_rel, linewidths=5)
+    # nx.draw(graph, pos, with_labels=False, nodelist=list(map(lambda node: node[0], rel_node_lst)), node_size=100, node_shape='s', alpha=0.1, node_color=color_rel, linewidths=5)
     # nx.draw_networkx_edge_labels(graph, pos, edge_labels=labels, alpha=0.5, label_pos=0.3, verticalalignment='top')
     nx.draw_networkx_edges(graph, pos)
     for node, (x, y) in pos.items():

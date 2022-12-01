@@ -8,6 +8,8 @@ import matplotlib.pyplot as plt
 from matplotlib.pyplot import text
 from mpl_toolkits.mplot3d import Axes3D
 
+from networkx_viewer import Viewer
+
 # Load Classes
 # https://github.com/3DSSG/3DSSG.github.io/blob/master/README.md 
 """
@@ -170,10 +172,14 @@ def draw_graph(objs, edge_dict: dict, obj_dict: dict):
     s : square, o: circle, ^: triangle, > : right triangle, v : bottom triangle, < : left triangle
     d : diamond, p : pentagon, h : hexagon, 8 : octagonal
     """
-    nx.draw(graph, pos, with_labels=False, node_size=700, node_shape='s', node_color=color, linewidths=5)
-    nx.draw_networkx_edge_labels(graph, pos, edge_labels=labels, alpha=0.5, label_pos=0.3, verticalalignment='top')
-    for node, (x, y) in pos.items():
-        text(x, y, node, fontsize=8, ha='center', va='center')
+    # nx.draw(graph, pos, with_labels=False, node_size=700, node_shape='s', node_color=color, linewidths=5)
+    # nx.draw_networkx_edges(graph, pos, alpha=0.5)
+    # for node, (x, y) in pos.items():
+    #    text(x, y, node, fontsize=8, ha='center', va='center')
+    
+    app = Viewer(graph)
+    app.canvas.dataG
+    app.mainloop()
     plt.show()
 
 def visualizer_3d():
