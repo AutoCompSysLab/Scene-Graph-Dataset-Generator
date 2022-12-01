@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 
 from matplotlib.pyplot import text
 from mpl_toolkits.mplot3d import Axes3D
+from mpl_toolkits.mplot3d import proj3d
 
 from networkx_viewer import Viewer
 
@@ -171,10 +172,12 @@ def draw_graph(objs, edge_dict: dict, obj_dict: dict):
     """
     
     edge_pos = []
+    edge_lst = []
     for edges in edge_dict:
         graph.add_edge(obj_dict[edges[0]]["name"], obj_dict[edges[1]]["name"], name=edge_dict[edges][:-2])
         start_pos, end_pos = obj_dict[edges[0]]["position"], obj_dict[edges[1]]["position"]
         edge_pos.append((start_pos, end_pos))
+        edge_lst.append(edge_dict[edges][:-2])
     edge_xyz = np.array(edge_pos)
         
     labels = nx.get_edge_attributes(graph, "name")
@@ -188,16 +191,80 @@ def draw_graph(objs, edge_dict: dict, obj_dict: dict):
     #    text(x, y, node, fontsize=8, ha='center', va='center')
     
     fig = plt.figure()
-    ax = fig.add_subplot(111, projection="3d")
-    print("//////////////////////////")
-    print(node_xyz.shape)
-    ax.scatter(*node_xyz.T, ec="w")
+    ax = fig.add_subplot(projection="3d")
+    # ax.scatter(*node_xyz.T, ec="w")
+
+    for i in range(len(node_xyz)):
+        ax.scatter(np.array(node_xyz[i,0]), np.array(node_xyz[i,1]), np.array(node_xyz[i,2]), s=400, ec="w", c=node_lst[i][1]["color"], alpha=0.4)
+        ax.text(node_xyz[i,0], node_xyz[i,1], node_xyz[i,2], '%s'%node_lst[i][1]["label"], size=10, color="black", visible=True, wrap=True, fontweight=1000)
 
     for vizedge in edge_xyz:
         ax.plot(*vizedge.T, color="tab:gray")
         
     _format_axes(ax)
-    fig.tight_layout()
+    def distance(edge, event):
+        """Return distance between mouse position and given data point
+
+        Args:
+            point (np.array): np.array of shape (3,), with x,y,z in data coords
+            event (MouseEvent): mouse event (which contains mouse position in .x and .xdata)
+        Returns:
+            distance (np.float64): distance (in screen coords) between mouse pos and data point
+        """
+        point = (edge[0]+edge[1])/2
+        assert point.shape == (3,), "distance: point.shape is wrong: %s, must be (3,)" % point.shape
+
+        # Project 3d data space to 2d data space
+        x2, y2, _ = proj3d.proj_transform(point[0], point[1], point[2], plt.gca().get_proj())
+        # Convert 2d data space to 2d screen space
+        x3, y3 = ax.transData.transform((x2, y2))
+
+        return np.sqrt ((x3 - event.x)**2 + (y3 - event.y)**2)
+
+
+    def calcClosestDatapoint(X, event):
+        """"Calculate which data point is closest to the mouse position.
+
+        Args:
+            X (np.array) - array of points, of shape (numPoints, 3)
+            event (MouseEvent) - mouse event (containing mouse position)
+        Returns:
+            smallestIndex (int) - the index (into the array of points X) of the element closest to the mouse position
+        """
+        # edgepose -> start_end tuple
+        distances = [distance (X[i], event) for i in range(X.shape[0])]
+        return np.argmin(distances)
+
+
+    def annotatePlot(edge_pos, index):
+        """Create popover label in 3d chart
+
+        Args:
+            X (np.array) - array of points, of shape (numPoints, 3)
+            index (int) - index (into points array X) of item which should be printed
+        Returns:
+            None
+        """
+        # If we have previously displayed another label, remove it first
+        if hasattr(annotatePlot, 'label'):
+            annotatePlot.label.remove()
+        X =(edge_pos[index][0]+edge_pos[index][1])/2
+        # Get data point from array of points X, at position index
+        x2, y2, _ = proj3d.proj_transform(X[0], X[1], X[2], ax.get_proj())
+        annotatePlot.label = plt.annotate( "%s" % edge_lst[index],
+            xy = (x2, y2), xytext = (-20, 20), textcoords = 'offset points', ha = 'right', va = 'bottom',
+            bbox = dict(boxstyle = 'round,pad=0.5', fc = 'lightblue', alpha = 0.5),
+            arrowprops = dict(arrowstyle = '->', connectionstyle = 'arc3,rad=0'))
+        fig.canvas.draw()
+
+
+    def onMouseMotion(event):
+        """Event that is triggered when mouse is moved. Shows text annotation over data point closest to mouse."""
+        closestIndex = calcClosestDatapoint(np.array(edge_pos), event)
+        annotatePlot (np.array(edge_pos), closestIndex)
+
+    fig.canvas.mpl_connect('motion_notify_event', onMouseMotion)  # on mouse motion
+    # fig.tight_layout()
     plt.show()
     
 def _format_axes(ax):
