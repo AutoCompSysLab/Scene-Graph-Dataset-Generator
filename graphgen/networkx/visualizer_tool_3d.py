@@ -172,10 +172,12 @@ def draw_graph(objs, edge_dict: dict, obj_dict: dict):
     """
     
     edge_pos = []
+    edge_lst = []
     for edges in edge_dict:
         graph.add_edge(obj_dict[edges[0]]["name"], obj_dict[edges[1]]["name"], name=edge_dict[edges][:-2])
         start_pos, end_pos = obj_dict[edges[0]]["position"], obj_dict[edges[1]]["position"]
         edge_pos.append((start_pos, end_pos))
+        edge_lst.append(edge_dict[edges][:-2])
     edge_xyz = np.array(edge_pos)
         
     labels = nx.get_edge_attributes(graph, "name")
@@ -193,14 +195,14 @@ def draw_graph(objs, edge_dict: dict, obj_dict: dict):
     # ax.scatter(*node_xyz.T, ec="w")
 
     for i in range(len(node_xyz)):
-        ax.scatter(np.array(node_xyz[i,0]), np.array(node_xyz[i,1]), np.array(node_xyz[i,2]), s=400, ec="w", c=node_lst[i][1]["color"], mouseover=False)
-        # ax.text(node_xyz[i,0], node_xyz[i,1], node_xyz[i,2], '%s'%node_lst[i][1]["label"], size=10, color="black", mouseover=False)
+        ax.scatter(np.array(node_xyz[i,0]), np.array(node_xyz[i,1]), np.array(node_xyz[i,2]), s=400, ec="w", c=node_lst[i][1]["color"], alpha=0.4)
+        ax.text(node_xyz[i,0], node_xyz[i,1], node_xyz[i,2], '%s'%node_lst[i][1]["label"], size=10, color="black", visible=True, wrap=True, fontweight=1000)
 
     for vizedge in edge_xyz:
         ax.plot(*vizedge.T, color="tab:gray")
         
     _format_axes(ax)
-    def distance(point, event):
+    def distance(edge, event):
         """Return distance between mouse position and given data point
 
         Args:
@@ -209,6 +211,7 @@ def draw_graph(objs, edge_dict: dict, obj_dict: dict):
         Returns:
             distance (np.float64): distance (in screen coords) between mouse pos and data point
         """
+        point = (edge[0]+edge[1])/2
         assert point.shape == (3,), "distance: point.shape is wrong: %s, must be (3,)" % point.shape
 
         # Project 3d data space to 2d data space
@@ -228,11 +231,12 @@ def draw_graph(objs, edge_dict: dict, obj_dict: dict):
         Returns:
             smallestIndex (int) - the index (into the array of points X) of the element closest to the mouse position
         """
-        distances = [distance (X[i, 0:3], event) for i in range(X.shape[0])]
+        # edgepose -> start_end tuple
+        distances = [distance (X[i], event) for i in range(X.shape[0])]
         return np.argmin(distances)
 
 
-    def annotatePlot(X, index):
+    def annotatePlot(edge_pos, index):
         """Create popover label in 3d chart
 
         Args:
@@ -244,9 +248,10 @@ def draw_graph(objs, edge_dict: dict, obj_dict: dict):
         # If we have previously displayed another label, remove it first
         if hasattr(annotatePlot, 'label'):
             annotatePlot.label.remove()
+        X =(edge_pos[index][0]+edge_pos[index][1])/2
         # Get data point from array of points X, at position index
-        x2, y2, _ = proj3d.proj_transform(X[index, 0], X[index, 1], X[index, 2], ax.get_proj())
-        annotatePlot.label = plt.annotate( "%s" % node_lst[index][1]["label"],
+        x2, y2, _ = proj3d.proj_transform(X[0], X[1], X[2], ax.get_proj())
+        annotatePlot.label = plt.annotate( "%s" % edge_lst[index],
             xy = (x2, y2), xytext = (-20, 20), textcoords = 'offset points', ha = 'right', va = 'bottom',
             bbox = dict(boxstyle = 'round,pad=0.5', fc = 'lightblue', alpha = 0.5),
             arrowprops = dict(arrowstyle = '->', connectionstyle = 'arc3,rad=0'))
@@ -255,8 +260,8 @@ def draw_graph(objs, edge_dict: dict, obj_dict: dict):
 
     def onMouseMotion(event):
         """Event that is triggered when mouse is moved. Shows text annotation over data point closest to mouse."""
-        closestIndex = calcClosestDatapoint(np.array(node_pos), event)
-        annotatePlot (np.array(node_pos), closestIndex)
+        closestIndex = calcClosestDatapoint(np.array(edge_pos), event)
+        annotatePlot (np.array(edge_pos), closestIndex)
 
     fig.canvas.mpl_connect('motion_notify_event', onMouseMotion)  # on mouse motion
     # fig.tight_layout()
