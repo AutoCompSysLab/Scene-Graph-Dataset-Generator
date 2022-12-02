@@ -236,7 +236,8 @@ def draw_graph(objs, edge_dict: dict, obj_dict: dict):
         """
         # edgepose -> start_end tuple
         distances = [distanceEdge (X[i], event) for i in range(X.shape[0])]
-        return np.argmin(distances), np.min(distances)
+        min_idx = np.argmin(distances)
+        return np.argmin(distances), distances[min_idx]
 
 
     def annotateEdgePlot(edge_pos, index):
