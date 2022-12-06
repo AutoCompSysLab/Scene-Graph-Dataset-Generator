@@ -1,17 +1,12 @@
 import os
 import json
-import pprint
 import random
 import numpy as np
-import networkx as nx
 import matplotlib.pyplot as plt
 
-from matplotlib.pyplot import text
 from matplotlib.backend_bases import MouseButton
-from mpl_toolkits.mplot3d import Axes3D
-from mpl_toolkits.mplot3d import proj3d
 
-from networkx_viewer import Viewer
+from mpl_toolkits.mplot3d import proj3d
 
 # Load Classes
 # https://github.com/3DSSG/3DSSG.github.io/blob/master/README.md 
@@ -153,6 +148,7 @@ def make_position_color(node_lst:list) -> tuple:
 
 def draw_graph(objs, edge_dict: dict, obj_dict: dict):
     node_lst = []
+    # TODO node_pos 지워도 됨!! networkx 에서 사용
     node_pos = []
     for id in obj_dict:
         obj = obj_dict[id]
@@ -237,7 +233,7 @@ def draw_graph(objs, edge_dict: dict, obj_dict: dict):
         # edgepose -> start_end tuple
         distances = [distanceEdge (X[i], event) for i in range(X.shape[0])]
         min_idx = np.argmin(distances)
-        return np.argmin(distances), distances[min_idx]
+        return min_idx, distances[min_idx]
 
 
     def annotateEdgePlot(edge_pos, index):
