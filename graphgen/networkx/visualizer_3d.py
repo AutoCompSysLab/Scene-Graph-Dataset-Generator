@@ -163,7 +163,6 @@ def draw_graph(objs, edge_dict: dict, obj_dict: dict):
             }
         )
         node_lst.append(node)
-        print(obj.get("position"))
         node_pos.append(obj.get("position"))
     # obj node 추가
     node_xyz = np.array(node_pos)
@@ -189,18 +188,24 @@ def draw_graph(objs, edge_dict: dict, obj_dict: dict):
     """
     
     fig = plt.figure()
-    ax = fig.add_subplot(projection="3d")
+    ax = fig.add_subplot(projection="3d", computed_zorder=False)
     
     # draw node
     for i in range(len(node_xyz)):
-        ax.scatter(np.array(node_xyz[i,0]), np.array(node_xyz[i,1]), np.array(node_xyz[i,2]), s=400, ec="w", c=node_lst[i][1]["color"], alpha=0.4, zorder=1)
-        ax.text(node_xyz[i,0], node_xyz[i,1], node_xyz[i,2], '%s'%node_lst[i][1]["label"], size=10, color="black", visible=True, wrap=True, fontweight=1000, zorder=2)
+        ax.scatter(np.array(node_xyz[i,0]), np.array(node_xyz[i,1]), np.array(node_xyz[i,2]), s=1200, ec="w", c=node_lst[i][1]["color"], alpha=0.8, zorder=2)
+        ax.text(node_xyz[i,0], node_xyz[i,1], node_xyz[i,2], '%s'%node_lst[i][1]["label"], size=10, color="black", visible=True, wrap=True, fontweight=1000, zorder=5, ha='center', va='center')
 
     # draw edge
     for vizedge in edge_xyz:
-        ax.plot(*vizedge.T, color="tab:gray", alpha=0.5, zorder=1)
+        ax.plot(*vizedge.T, color="black", alpha=0.2, zorder=1, linewidth=1)
         
     _format_axes(ax)
+    
+    def cal_dist(x1, y1, x2, y2, a, b):
+        area = abs((x1-a) * (y2-b) - (y1-b) * (x2 - a))
+        AB = ((x1-x2)**2 + (y1-y2)**2) **0.5
+        return area/AB
+    
     def distanceEdge(edge, event):
         """Return distance between mouse position and given data point
 
@@ -210,15 +215,26 @@ def draw_graph(objs, edge_dict: dict, obj_dict: dict):
         Returns:
             distance (np.float64): distance (in screen coords) between mouse pos and data point
         """
-        point = (edge[0]+edge[1])/2
-        assert point.shape == (3,), "distance: point.shape is wrong: %s, must be (3,)" % point.shape
+        start = edge[0]
+        end = edge[1]
+        event_x = event.x
+        event_y = event.y
+        assert start.shape == (3,), "distance: start.shape is wrong: %s, must be (3,)" % start.shape
+        assert end.shape == (3,), "distance: end.shape is wrong: %s, must be (3,)" % end.shape
 
         # Project 3d data space to 2d data space
-        x2, y2, _ = proj3d.proj_transform(point[0], point[1], point[2], plt.gca().get_proj())
+        start_x2, start_y2, _ = proj3d.proj_transform(start[0], start[1], start[2], plt.gca().get_proj())
         # Convert 2d data space to 2d screen space
-        x3, y3 = ax.transData.transform((x2, y2))
+        start_x3, start_y3 = ax.transData.transform((start_x2, start_y2))
 
-        return np.sqrt ((x3 - event.x)**2 + (y3 - event.y)**2)
+        # Project 3d data space to 2d data space
+        end_x2, end_y2, _ = proj3d.proj_transform(end[0], end[1], end[2], plt.gca().get_proj())
+        # Convert 2d data space to 2d screen space
+        end_x3, end_y3 = ax.transData.transform((end_x2, end_y2))
+        
+        return cal_dist(start_x3, start_y3, end_x3, end_y3, event_x, event_y)
+        
+        # return np.sqrt ((x3 - event.x)**2 + (y3 - event.y)**2)
 
 
     def calcClosestDataEdge(X, event):
@@ -236,7 +252,7 @@ def draw_graph(objs, edge_dict: dict, obj_dict: dict):
         return min_idx, distances[min_idx]
 
 
-    def annotateEdgePlot(edge_pos, index):
+    def annotateEdgePlot(edge_pos, index, event):
         """Create popover label in 3d chart
 
         Args:
@@ -265,9 +281,8 @@ def draw_graph(objs, edge_dict: dict, obj_dict: dict):
         end_id = edge_lst[index][0][1]
         start_label = str(obj_dict[start_id]["label"]).replace("\n", " ")
         end_label = str(obj_dict[end_id]["label"]).replace("\n", " ")
-        
         annotateEdgePlot.label = plt.annotate(f"{edge_lst[index][1][:-2]}\n({start_label}, {end_label})",
-            xy = (x2, y2), xytext = (-20, 20), textcoords = 'offset points', ha = 'right', va = 'bottom',
+            xy = (event.xdata, event.ydata), xytext = (-20, 20), textcoords = 'offset points', ha = 'right', va = 'bottom',
             size=15, fontweight=700, zorder=10,
             bbox = dict(boxstyle = 'round,pad=0.5', fc = 'lightblue', alpha = 0.9),
             arrowprops = dict(arrowstyle = '->', connectionstyle = 'arc3,rad=0'))
@@ -300,7 +315,8 @@ def draw_graph(objs, edge_dict: dict, obj_dict: dict):
             smallestIndex (int) - the index (into the array of points X) of the element closest to the mouse position
         """
         distances = [distancePoint (X[i, 0:3], event) for i in range(X.shape[0])]
-        return np.argmin(distances), np.min(distances)
+        min_idx = np.argmin(distances)
+        return min_idx, distances[min_idx]
 
 
     def annotateNodePlot(X, index):
@@ -325,9 +341,10 @@ def draw_graph(objs, edge_dict: dict, obj_dict: dict):
         # Get data point from array of points X, at position index
         x2, y2, _ = proj3d.proj_transform(X[index, 0], X[index, 1], X[index, 2], ax.get_proj())
         
-        node_label = str(node_lst[index][1]["label"]).replace("\n", " ")
-        node_pos = f'x:{node_lst[index][1]["position"][0]}, y:{node_lst[index][1]["position"][1]}, z:{node_lst[index][1]["position"][2]}'
-        node_attr = f'\n{node_lst[index][1]["attributes"]}' if node_lst[index][1]["attributes"] else "\nNone"
+        node = node_lst[index][1]
+        node_label = str(node["label"]).replace("\n", " ")
+        node_pos = f'x:{node["position"][0]}, y:{node["position"][1]}, z:{node["position"][2]}'
+        node_attr = f'\n{node["attributes"]}' if node["attributes"] else "\nNone"
         
         annotateNodePlot.label = plt.annotate(f'{node_label}\n{node_pos}{node_attr}',
             xy = (x2, y2), xytext = (-20, 20), textcoords = 'offset points', ha = 'right', va = 'bottom',
@@ -345,10 +362,10 @@ def draw_graph(objs, edge_dict: dict, obj_dict: dict):
         if event.button is MouseButton.LEFT:
             closestEdgeIndex, closestEdgeDistance = calcClosestDataEdge(np.array(edge_pos), event)
             closestNodeIndex, closestNodeDistance = calcClosestNode(np.array(node_pos), event)
-            if closestEdgeDistance > closestNodeDistance:
+            if closestNodeDistance<30 or closestEdgeDistance > closestNodeDistance :
                 annotateNodePlot (np.array(node_pos), closestNodeIndex)
-            else:
-                annotateEdgePlot (np.array(edge_pos), closestEdgeIndex)
+            elif closestEdgeDistance<5:
+                annotateEdgePlot (np.array(edge_pos), closestEdgeIndex, event)
     
     # motion_id = fig.canvas.mpl_connect('motion_notify_event', onMouseMotion)  # on mouse motion
     fig.canvas.mpl_connect('button_press_event', on_click)
