@@ -7,7 +7,7 @@ python 3.8.10
 # Setup
 In your virtual environment
 
-`pip install requirements.txt`
+`pip install -r requirements.txt`
 
 # Run
 `python graphgen/networkx/visualizer_3d.py`
