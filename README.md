@@ -1,5 +1,5 @@
-# Scene-Graph-Dataset-Generator
-Scene Graph Dataset Generator
+# 3D-Scene-Graph-Dataset-Visualizer
+3D Scene Graph Dataset Visualizer
 
 # Environment
 python 3.8.10
